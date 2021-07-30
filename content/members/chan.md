@@ -1,10 +1,10 @@
 ---
 name: chan.
-image: /img/fh010012.jpg
-grade: "4"
-department: 芸術専門学群
-equipment: canon kiss eosX8i、minolta XE
-twitter: rac_17_chan
+image: /img/fh000006のコピー-akihiro-kawai.jpg
+grade: "5"
+department: 芸術
+equipment: canon kiss EOS 8i, minolta XE
+twitter: chan1604rac
 instagram: chan1604rac
-comment: ポートレート、風景、小物、テーブルフォトなどいろいろ撮っています。
+comment: 抽象写真、風景、ポートレート、小物、料理写真など色々撮ります。
 ---
