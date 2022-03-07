@@ -62,6 +62,7 @@ const Header: React.FC<Props> = (props) => (
           >
             <Menu.Item name="members" as={Link} to="/members" />
             <Menu.Item name="blogs" as={Link} to="/blogs" />
+            <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" />
             {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
               <Menu.Item
                 name={node.frontmatter.title}
