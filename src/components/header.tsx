@@ -69,7 +69,7 @@ const Header: React.FC<Props> = (props) => (
                 to={node.fields.slug}
               />
             ))}
-            <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" />
+            <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" />
           </Menu>
         </div>
       </div>
