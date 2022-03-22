@@ -1,4 +1,7 @@
 import React from "react"
+import "./index.css"
+import "semantic-ui-css/semantic.min.css"
+import Header from "../components/header"
 import Meta from "../components/meta"
 
 if (typeof window !== "undefined") {
@@ -11,6 +14,7 @@ if (typeof window !== "undefined") {
 const IndexPage: React.FC = () => (
   <>
     <Meta />
+    <Header fixed />
   </>
 )
 
