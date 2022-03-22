@@ -1,3 +1,5 @@
+import React from "react"
+
 if (typeof window !== "undefined") {
   if (window.innerWidth < window.innerHeight) {
     document.location = "https://tsukuba-photoclub.com/about/";
@@ -5,7 +7,6 @@ if (typeof window !== "undefined") {
     document.location = "https://tsukuba-photoclub.com/contact/";
 }
 
-import React from "react"
 const IndexPage: React.FC = () => ()
 
 export default IndexPage
