@@ -1,15 +1,15 @@
 import React from "react"
-import Meta from "../components/meta"
 
-if (window.innerWidth < window.innerHeight) {
-  document.location = "/About";
-}else{
-  document.location = "/Contact";
+if (typeof window !== "undefined") {
+  if (window.innerWidth < window.innerHeight) {
+    document.location = "/About";
+  }else{
+    document.location = "/Contact";
+  }
 }
 
 const IndexPage: React.FC = () => (
   <>
-    <Meta />
   </>
 )
 
