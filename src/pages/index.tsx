@@ -5,7 +5,7 @@ import Slideshow from "../components/slide-show"
 import Header from "../components/header"
 import Meta from "../components/meta"
 
-    if (process.browser) {
+    if (typeof window !== "undefined") {
       if (window.innerWidth > window.innerHeight) {
         document.location = "https://tsukuba-photoclub.com/about/";
       }
