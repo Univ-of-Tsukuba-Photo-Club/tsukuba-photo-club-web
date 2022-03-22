@@ -4,3 +4,8 @@ if (typeof window !== "undefined") {
   }else{
     document.location = "https://tsukuba-photoclub.com/contact/";
 }
+
+//  import React from "react"
+//  const IndexPage: React.FC = () => ()
+
+export default IndexPage
