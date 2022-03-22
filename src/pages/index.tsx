@@ -5,13 +5,14 @@ import Slideshow from "../components/slide-show"
 import Header from "../components/header"
 import Meta from "../components/meta"
 
-const IndexPage: React.FC = () => (
-  <>
     <script type="text/javascript">
       if (window.innerWidth < window.innerHeight) {
         document.location = "https://tsukuba-photoclub.com/about/";
       }
     </script>
+
+const IndexPage: React.FC = () => (
+  <>
     <Meta />
     <Header fixed />
     <Slideshow
