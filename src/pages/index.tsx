@@ -1,4 +1,5 @@
 import React from "react"
+import Meta from "../components/meta"
 
 if (typeof window !== "undefined") {
   if (window.innerWidth < window.innerHeight) {
@@ -7,6 +8,10 @@ if (typeof window !== "undefined") {
     document.location = "https://tsukuba-photoclub.com/contact/";
 }
 
-const IndexPage: React.FC = () => ()
+const IndexPage: React.FC = () => (
+  <>
+    <Meta />
+  </>
+)
 
 export default IndexPage
