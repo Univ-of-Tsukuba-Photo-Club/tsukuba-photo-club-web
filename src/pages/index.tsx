@@ -7,6 +7,11 @@ import Meta from "../components/meta"
 
 const IndexPage: React.FC = () => (
   <>
+    <script type="text/javascript">
+      if (window.innerWidth < window.innerHeight) {
+        document.location = "https://tsukuba-photoclub.com/about/";
+      }
+    </script>
     <Meta />
     <Header fixed />
     <Slideshow
