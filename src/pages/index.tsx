@@ -6,7 +6,7 @@ import Header from "../components/header"
 import Meta from "../components/meta"
 
     if (process.browser) {
-      if (window.innerWidth < window.innerHeight) {
+      if (window.innerWidth > window.innerHeight) {
         document.location = "https://tsukuba-photoclub.com/about/";
       }
     }
