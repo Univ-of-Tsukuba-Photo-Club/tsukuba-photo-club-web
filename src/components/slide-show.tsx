@@ -1,8 +1,19 @@
+
 import React, { useEffect, useState, useRef } from "react"
 import { css } from "@emotion/core"
 
 type Props = {
   imageUrls: string[]
+}
+
+if (typeof window !== "undefined") {
+  if (window.innerWidth < window.innerHeight) {
+    const oF = cover
+  }else{
+    const oF = contain
+  }
+}else{
+  const oF = cover
 }
 
 const Slideshow: React.FC<Props> = (props) => {
@@ -18,49 +29,25 @@ const Slideshow: React.FC<Props> = (props) => {
     }, 6000)
     return () => clearTimeout(timer)
   }, [urlIdx])
-  
-  if (typeof window !== "undefined") {
-    if (window.innerWidth < window.innerHeight) {
-      return (
-        <>
-          {imageUrls.map((url, idx) => (
-            <img
-              key={url}
-              css={css({
-                width: "100vw",
-                height: "100vh",
-                objectFit: "cover",
-                position: "absolute",
-                opacity: idx === urlIdx ? "1" : "0",
-                transition: "opacity 1s ease",
-              })}
-              src={url}
-            />
-          ))}
-        </>
-      )
-    }else{
-      return (
-        <>
-          {imageUrls.map((url, idx) => (
-            <img
-              key={url}
-              css={css({
-                width: "100vw",
-                height: "100vh",
-                objectFit: "contain",
-                position: "absolute",
-                opacity: idx === urlIdx ? "1" : "0",
-                transition: "opacity 1s ease",
-              })}
-              src={url}
-            />
-          ))}
-        </>
-      )
-    }
-  }
-  
+
+  return (
+    <>
+      {imageUrls.map((url, idx) => (
+        <img
+          key={url}
+          css={css({
+            width: "100vw",
+            height: "100vh",
+            objectFit: (oF),
+            position: "absolute",
+            opacity: idx === urlIdx ? "1" : "0",
+            transition: "opacity 1s ease",
+          })}
+          src={url}
+        />
+      ))}
+    </>
+  )
 }
 
 export default Slideshow
