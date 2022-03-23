@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from "react"
 import { css } from "@emotion/core"
 
@@ -19,13 +18,19 @@ const Slideshow: React.FC<Props> = (props) => {
     }, 6000)
     return () => clearTimeout(timer)
   }, [urlIdx])
+  
+  if (typeof window !== "undefined") {
+    if (window.innerWidth < window.innerHeight) {
+      const oF = "cover"
+    }else{
+      const oF = "contain"
+    }
+  }else{
+    const oF = "cover"
+  }
 
   return (
     <>
-      
-if (typeof window !== "undefined") {
-  if (window.innerWidth < window.innerHeight) {
-  
       {imageUrls.map((url, idx) => (
         <img
           key={url}
@@ -40,27 +45,6 @@ if (typeof window !== "undefined") {
           src={url}
         />
       ))}
-
-  }else{
-  
-      {imageUrls.map((url, idx) => (
-        <img
-          key={url}
-          css={css({
-            width: "100vw",
-            height: "100vh",
-            objectFit: oF,
-            position: "absolute",
-            opacity: idx === urlIdx ? "1" : "0",
-            transition: "opacity 1s ease",
-          })}
-          src={url}
-        />
-      ))}
-    
-  }
-}
-      
     </>
   )
 }
