@@ -1,4 +1,3 @@
-
 import React from "react"
 
 if (typeof window !== "undefined") {
@@ -9,6 +8,9 @@ if (typeof window !== "undefined") {
   }
 }
 
-const IndexPage: React.FC = () => ()
+const IndexPage: React.FC = () => (
+  <>
+  </>
+)
 
 export default IndexPage
