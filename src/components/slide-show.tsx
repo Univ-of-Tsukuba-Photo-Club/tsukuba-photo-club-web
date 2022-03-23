@@ -8,12 +8,12 @@ type Props = {
 
 if (typeof window !== "undefined") {
   if (window.innerWidth < window.innerHeight) {
-    const oF = cover
+    const oF = "cover"
   }else{
-    const oF = contain
+    const oF = "contain"
   }
 }else{
-  const oF = cover
+  const oF = "cover"
 }
 
 const Slideshow: React.FC<Props> = (props) => {
