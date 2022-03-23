@@ -18,6 +18,16 @@ const Slideshow: React.FC<Props> = (props) => {
     }, 6000)
     return () => clearTimeout(timer)
   }, [urlIdx])
+  
+  if (typeof window !== "undefined") {
+    if (window.innerWidth < window.innerHeight) {
+      const oF = "cover"
+    }else{
+      const oF = "contain"
+    }
+  }else{
+    const oF = "cover"
+  }
 
   return (
     <>
@@ -27,7 +37,7 @@ const Slideshow: React.FC<Props> = (props) => {
           css={css({
             width: "100vw",
             height: "100vh",
-            objectFit: "cover",
+            objectFit: oF,
             position: "absolute",
             opacity: idx === urlIdx ? "1" : "0",
             transition: "opacity 1s ease",
