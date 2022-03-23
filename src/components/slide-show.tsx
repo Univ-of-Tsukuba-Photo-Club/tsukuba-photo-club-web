@@ -6,16 +6,6 @@ type Props = {
   imageUrls: string[]
 }
 
-if (typeof window !== "undefined") {
-  if (window.innerWidth < window.innerHeight) {
-    const oF = "cover"
-  }else{
-    const oF = "contain"
-  }
-}else{
-  const oF = "cover"
-}
-
 const Slideshow: React.FC<Props> = (props) => {
   const { imageUrls } = props
 
@@ -32,6 +22,10 @@ const Slideshow: React.FC<Props> = (props) => {
 
   return (
     <>
+      
+if (typeof window !== "undefined") {
+  if (window.innerWidth < window.innerHeight) {
+  
       {imageUrls.map((url, idx) => (
         <img
           key={url}
@@ -46,6 +40,27 @@ const Slideshow: React.FC<Props> = (props) => {
           src={url}
         />
       ))}
+
+  }else{
+  
+      {imageUrls.map((url, idx) => (
+        <img
+          key={url}
+          css={css({
+            width: "100vw",
+            height: "100vh",
+            objectFit: oF,
+            position: "absolute",
+            opacity: idx === urlIdx ? "1" : "0",
+            transition: "opacity 1s ease",
+          })}
+          src={url}
+        />
+      ))}
+    
+  }
+}
+      
     </>
   )
 }
