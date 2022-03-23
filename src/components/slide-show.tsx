@@ -30,7 +30,7 @@ const Slideshow: React.FC<Props> = (props) => {
           css={css({
             width: "100vw",
             height: "100vh",
-            objectFit: "cover",
+            objectFit: "contain",
             position: "absolute",
             opacity: idx === urlIdx ? "1" : "0",
             transition: "opacity 1s ease",
@@ -51,7 +51,7 @@ const Slideshow: React.FC<Props> = (props) => {
           css={css({
             width: "100vw",
             height: "100vh",
-            objectFit: "contain",
+            objectFit: "cover",
             position: "absolute",
             opacity: idx === urlIdx ? "1" : "0",
             transition: "opacity 1s ease",
@@ -67,20 +67,6 @@ const Slideshow: React.FC<Props> = (props) => {
 
   return (
     <>
-      {imageUrls.map((url, idx) => (
-        <img
-          key={url}
-          css={css({
-            width: "100vw",
-            height: "100vh",
-            objectFit: "cover",
-            position: "absolute",
-            opacity: idx === urlIdx ? "1" : "0",
-            transition: "opacity 1s ease",
-          })}
-          src={url}
-        />
-      ))}
     </>
   )
     
