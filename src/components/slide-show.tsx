@@ -41,7 +41,7 @@ const Slideshow: React.FC<Props> = (props) => {
     </>
   )
       
-    }else{
+    } else {
       
   return (
     <>
@@ -62,7 +62,8 @@ const Slideshow: React.FC<Props> = (props) => {
     </>
   )
       
-  }else{
+    }
+  } else {
 
   return (
     <>
