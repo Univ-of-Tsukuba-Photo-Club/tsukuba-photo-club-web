@@ -5,6 +5,14 @@ import Slideshow from "../components/slide-show"
 import Header from "../components/header"
 import Meta from "../components/meta"
 
+if (typeof window !== "undefined") {
+  if (window.innerWidth < window.innerHeight) {
+    import Slideshow from "../components/slide-show"
+  }else{
+    import Slideshow from "../components/slide-show-sp"
+  }
+}
+
 const IndexPage: React.FC = () => (
   <>
     <Meta />
