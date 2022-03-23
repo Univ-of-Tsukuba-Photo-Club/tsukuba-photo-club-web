@@ -20,15 +20,8 @@ const Slideshow: React.FC<Props> = (props) => {
   }, [urlIdx])
   
   if (typeof window !== "undefined") {
-    if (window.innerWidth < window.innerHeight) {
-      const oF = "cover"
-    }else{
-      const oF = "contain"
-    }
-  }else{
-    const oF = "cover"
-  }
-
+    if (window.innerWidth < window.innerHeight) { //スマホの場合
+  
   return (
     <>
       {imageUrls.map((url, idx) => (
@@ -37,7 +30,7 @@ const Slideshow: React.FC<Props> = (props) => {
           css={css({
             width: "100vw",
             height: "100vh",
-            objectFit: oF,
+            objectFit: "cover",
             position: "absolute",
             opacity: idx === urlIdx ? "1" : "0",
             transition: "opacity 1s ease",
@@ -47,6 +40,51 @@ const Slideshow: React.FC<Props> = (props) => {
       ))}
     </>
   )
+      
+    }else{
+      
+  return (
+    <>
+      {imageUrls.map((url, idx) => (
+        <img
+          key={url}
+          css={css({
+            width: "100vw",
+            height: "100vh",
+            objectFit: "contain",
+            position: "absolute",
+            opacity: idx === urlIdx ? "1" : "0",
+            transition: "opacity 1s ease",
+          })}
+          src={url}
+        />
+      ))}
+    </>
+  )
+      
+  }else{
+
+  return (
+    <>
+      {imageUrls.map((url, idx) => (
+        <img
+          key={url}
+          css={css({
+            width: "100vw",
+            height: "100vh",
+            objectFit: "cover",
+            position: "absolute",
+            opacity: idx === urlIdx ? "1" : "0",
+            transition: "opacity 1s ease",
+          })}
+          src={url}
+        />
+      ))}
+    </>
+  )
+    
+  }
+  
 }
 
 export default Slideshow
