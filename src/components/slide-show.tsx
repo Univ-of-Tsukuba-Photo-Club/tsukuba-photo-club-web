@@ -18,25 +18,49 @@ const Slideshow: React.FC<Props> = (props) => {
     }, 6000)
     return () => clearTimeout(timer)
   }, [urlIdx])
-
-  return (
-    <>
-      {imageUrls.map((url, idx) => (
-        <img
-          key={url}
-          css={css({
-            width: "100vw",
-            height: "100vh",
-            objectFit: "cover",
-            position: "absolute",
-            opacity: idx === urlIdx ? "1" : "0",
-            transition: "opacity 1s ease",
-          })}
-          src={url}
-        />
-      ))}
-    </>
-  )
+  
+  if (typeof window !== "undefined") {
+    if (window.innerWidth < window.innerHeight) {
+      return (
+        <>
+          {imageUrls.map((url, idx) => (
+            <img
+              key={url}
+              css={css({
+                width: "100vw",
+                height: "100vh",
+                objectFit: "cover",
+                position: "absolute",
+                opacity: idx === urlIdx ? "1" : "0",
+                transition: "opacity 1s ease",
+              })}
+              src={url}
+            />
+          ))}
+        </>
+      )
+    }else{
+      return (
+        <>
+          {imageUrls.map((url, idx) => (
+            <img
+              key={url}
+              css={css({
+                width: "100vw",
+                height: "100vh",
+                objectFit: "contain",
+                position: "absolute",
+                opacity: idx === urlIdx ? "1" : "0",
+                transition: "opacity 1s ease",
+              })}
+              src={url}
+            />
+          ))}
+        </>
+      )
+    }
+  }
+  
 }
 
 export default Slideshow
