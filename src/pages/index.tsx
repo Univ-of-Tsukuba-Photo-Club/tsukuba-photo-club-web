@@ -4,6 +4,7 @@ import "semantic-ui-css/semantic.min.css"
 import Slideshow from "../components/slide-show"
 import Header from "../components/header"
 import Meta from "../components/meta"
+import Footer from "../components/footer"
 
 const IndexPage: React.FC = () => (
   <>
@@ -17,6 +18,7 @@ const IndexPage: React.FC = () => (
         "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096"
       ]}
     />
+    <Footer />
   </>
 )
 
