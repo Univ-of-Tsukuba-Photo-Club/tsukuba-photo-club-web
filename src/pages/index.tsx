@@ -2,12 +2,15 @@ import React from "react"
 import "./index.css"
 import "semantic-ui-css/semantic.min.css"
 import Slideshow from "../components/slide-show"
+import Header from "../components/header"
 import Meta from "../components/meta"
 import css from "@emotion/css"
+import Footer from "../components/footer"
 
 const IndexPage: React.FC = () => (
   <>
     <Meta />
+    <Header fixed />
     <div
       css={css({
         width: "100vw",
@@ -24,6 +27,7 @@ const IndexPage: React.FC = () => (
         ]}
       />
     </div>
+    <Footer />
   </>
 )
 
