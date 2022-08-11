@@ -5,6 +5,7 @@ import Slideshow from "../components/slide-show"
 import Header from "../components/header"
 import Meta from "../components/meta"
 import Footer from "../components/footer"
+import css from "@emotion/css"
 
 const IndexPage: React.FC = () => (
   <>
