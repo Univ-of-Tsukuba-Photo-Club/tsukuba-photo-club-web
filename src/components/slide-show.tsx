@@ -28,6 +28,7 @@ const Slideshow: React.FC<Props> = (props) => {
             width: "100vw",
             height: "100vh",
             objectFit: "contain",
+            position: "absolute",
             opacity: idx === urlIdx ? "1" : "0",
             transition: "opacity 1s ease",
           })}
