@@ -14,7 +14,7 @@ const IndexPage: React.FC = () => (
         css={css({
           height: "300px",
           width: "300px",
-          background-color: "black"
+          backgroundcolor: "black"
         })}
       >
         <Slideshow
