@@ -11,6 +11,10 @@ const IndexPage: React.FC = () => (
     <Meta />
     <PageContainer>
       <Slideshow
+        css={css({
+          width: "100vw",
+          height: "67vw"
+        })}
         imageUrls={[
           "https://pbs.twimg.com/media/D3mc_PZV4AED70c?format=jpg&name=4096x4096",
           "https://pbs.twimg.com/media/EIWfG8JXkAAV-KD?format=jpg&name=large",
