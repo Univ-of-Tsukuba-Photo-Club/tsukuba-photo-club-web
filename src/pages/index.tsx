@@ -10,24 +10,32 @@ import Footer from "../components/footer"
 const IndexPage: React.FC = () => (
   <>
     <Meta />
-    <Header fixed />
     <div
       css={css({
-        width: "100vw",
-        height: "67vw",
-        left: "0px"
+        display: "flex",
+        flexFlow: "column",
+        minHeight: "100vh",
+        height: "100%",
       })}
     >
-      <Slideshow
-        imageUrls={[
-          "https://pbs.twimg.com/media/D3mc_PZV4AED70c?format=jpg&name=4096x4096",
-          "https://pbs.twimg.com/media/EIWfG8JXkAAV-KD?format=jpg&name=large",
-          "https://pbs.twimg.com/media/EIaE8zCXkAYsvlL?format=jpg&name=large",
-          "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096"
-        ]}
-      />
+      <Header fixed />
+      <div
+        css={css({
+          width: "100vw",
+          height: "75vw",
+        })}
+      >
+        <Slideshow
+          imageUrls={[
+            "https://pbs.twimg.com/media/D3mc_PZV4AED70c?format=jpg&name=4096x4096",
+            "https://pbs.twimg.com/media/EIWfG8JXkAAV-KD?format=jpg&name=large",
+            "https://pbs.twimg.com/media/EIaE8zCXkAYsvlL?format=jpg&name=large",
+            "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096"
+          ]}
+        />
+      </div>
+      <Footer />
     </div>
-    <Footer />
   </>
 )
 
