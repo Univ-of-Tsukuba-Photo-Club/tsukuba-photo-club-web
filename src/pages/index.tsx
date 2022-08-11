@@ -12,7 +12,9 @@ const IndexPage: React.FC = () => (
     <PageContainer>
       <div
         css={css({
-          height: "100vw"
+          height: "300px",
+          width: "300px",
+          background-color: "black"
         })}
       >
         <Slideshow
