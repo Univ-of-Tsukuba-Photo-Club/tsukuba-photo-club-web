@@ -18,7 +18,8 @@ const IndexPage: React.FC = () => (
         height: "100%",
       })}
     >
-      <Header fixed />
+      <Header />
+      <div />
       <div
         css={css({
           width: "100vw",
