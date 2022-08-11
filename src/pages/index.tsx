@@ -12,7 +12,7 @@ const IndexPage: React.FC = () => (
     <PageContainer>
       <div
         css={css({
-          align: "center"
+          height: "100vw"
         })}
       >
         <Slideshow
