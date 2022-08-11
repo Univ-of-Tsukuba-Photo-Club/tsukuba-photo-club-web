@@ -25,8 +25,8 @@ const Slideshow: React.FC<Props> = (props) => {
         <img
           key={url}
           css={css({
-            width: "100vw",
-            height: "100vh",
+            width: "100%",
+            height: "100%",
             objectFit: "contain",
             position: "absolute",
             opacity: idx === urlIdx ? "1" : "0",
