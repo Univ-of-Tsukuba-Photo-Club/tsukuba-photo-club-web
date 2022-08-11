@@ -4,6 +4,7 @@ import "semantic-ui-css/semantic.min.css"
 import Slideshow from "../components/slide-show"
 import Header from "../components/header"
 import Meta from "../components/meta"
+import Container from "semantic-ui-react"
 import Footer from "../components/footer"
 import css from "@emotion/css"
 
@@ -11,20 +12,22 @@ const IndexPage: React.FC = () => (
   <>
     <Meta />
     <Header fixed />
-    <div
-      css={css({
-        paddingTop: "12px",
-      })}
-    >
-      <Slideshow
-        imageUrls={[
-          "https://pbs.twimg.com/media/D3mc_PZV4AED70c?format=jpg&name=4096x4096",
-          "https://pbs.twimg.com/media/EIWfG8JXkAAV-KD?format=jpg&name=large",
-          "https://pbs.twimg.com/media/EIaE8zCXkAYsvlL?format=jpg&name=large",
-          "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096"
-        ]}
-      />
-    </div>
+    <Container>
+      <div
+        css={css({
+          paddingTop: "12px",
+        })}
+      >
+        <Slideshow
+          imageUrls={[
+            "https://pbs.twimg.com/media/D3mc_PZV4AED70c?format=jpg&name=4096x4096",
+            "https://pbs.twimg.com/media/EIWfG8JXkAAV-KD?format=jpg&name=large",
+            "https://pbs.twimg.com/media/EIaE8zCXkAYsvlL?format=jpg&name=large",
+            "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096"
+          ]}
+        />
+      </div>
+    </Container>
     <Footer />
   </>
 )
