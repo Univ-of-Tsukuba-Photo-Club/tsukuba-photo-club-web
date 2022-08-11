@@ -8,7 +8,7 @@ import Meta from "../components/meta"
 const IndexPage: React.FC = () => (
   <>
     <Meta />
-    <Header />
+    <Header fixed />
     <Slideshow
       imageUrls={[
         "https://pbs.twimg.com/media/D3mc_PZV4AED70c?format=jpg&name=4096x4096",
