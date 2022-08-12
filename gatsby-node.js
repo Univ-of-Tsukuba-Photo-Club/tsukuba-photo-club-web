@@ -33,7 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const pages = result.data.allMarkdownRemark.edges
-  const isPost = (page) => page.node.fields.slug.startsWith("/blogs/")
+  const isPost = (page) => page.node.fields.slug.startsWith("/blogs/" || "/events/")
   pages
     .filter((page) => isPost(page))
     .forEach((post, index, posts) => {
@@ -71,6 +71,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     let slug = createFilePath({ node, getNode })
     if (node.fileAbsolutePath.includes("content/blog")) {
       slug = `/blogs${slug}`
+    }
+    if (node.fileAbsolutePath.includes("content/event")) {
+      slug = `/event${slug}`
     }
 
     createNodeField({
