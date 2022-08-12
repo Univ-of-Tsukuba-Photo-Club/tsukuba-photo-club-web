@@ -26,7 +26,9 @@ const Slideshow: React.FC<Props> = (props) => {
           key={url}
           css={css({
             width: "100vw",
+            maxWidth: "100vh",
             height: "75vw",
+            maxHeight: "75vh",
             align: "center",
             objectFit: "contain",
             position: "absolute",
