@@ -26,7 +26,7 @@ const Blogs: React.FC = () => {
                 description
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 400, maxHeight: 200) {
+                    fluid(maxWidth: 200, maxHeight: 200) {
                       ...GatsbyImageSharpFluid_noBase64
                     }
                   }
@@ -55,9 +55,17 @@ const Blogs: React.FC = () => {
                 to={node.fields.slug}
                 css={css({ padding: "12px !important" })}
               >
+      <div
+        css={css({
+          width: "25%",
+          aspectRatio: "1 / 1",
+          alignSelf: "right",
+        })}
+      >
                 {node.frontmatter.image && (
                   <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
                 )}
+      </div>
                 <Card.Content>
                   <Header as="h2">{node.frontmatter.title}</Header>
                   <div
