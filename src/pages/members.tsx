@@ -67,7 +67,7 @@ const Members: React.FC = () => {
         <div
           css={css({
             maxWidth: "80vw",
-            alignSelf: "center",
+            alignItems: "center",
           })}
         >
         <Card.Group itemsPerRow={5} doubling stackable>
