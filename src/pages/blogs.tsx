@@ -26,7 +26,7 @@ const Blogs: React.FC = () => {
                 description
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 400, maxHeight: 400) {
+                    fluid(maxWidth: 400, maxHeight: 200) {
                       ...GatsbyImageSharpFluid_noBase64
                     }
                   }
