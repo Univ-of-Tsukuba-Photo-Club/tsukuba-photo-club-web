@@ -22,13 +22,12 @@ const IndexPage: React.FC = () => (
       <div
         css={css({
           width: "100vw",
-          height: "75vw",
+          height: "67vw",
           maxHeight: "90vh",
         })}
       >
         <Slideshow
           imageUrls={[
-            "https://pbs.twimg.com/media/D3mc_PZV4AED70c?format=jpg&name=4096x4096",
             "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096"
           ]}
         />
