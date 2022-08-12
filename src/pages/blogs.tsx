@@ -4,7 +4,6 @@ import Meta from "../components/meta"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { Card, CardGroup, Header } from "semantic-ui-react"
 import css from "@emotion/css"
-import Img from "gatsby-image"
 
 const Blogs: React.FC = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -24,13 +23,6 @@ const Blogs: React.FC = () => {
                 date(formatString: "MMMM DD, YYYY")
                 title
                 description
-                image {
-                  childImageSharp {
-                    fluid(maxWidth: 200, maxHeight: 200) {
-                      ...GatsbyImageSharpFluid_noBase64
-                    }
-                  }
-                }
               }
             }
           }
@@ -55,17 +47,6 @@ const Blogs: React.FC = () => {
                 to={node.fields.slug}
                 css={css({ padding: "12px !important" })}
               >
-      <div
-        css={css({
-          width: "25%",
-          aspectRatio: "1 / 1",
-          alignSelf: "right",
-        })}
-      >
-                {node.frontmatter.image && (
-                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
-                )}
-      </div>
                 <Card.Content>
                   <Header as="h2">{node.frontmatter.title}</Header>
                   <div
