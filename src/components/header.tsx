@@ -60,8 +60,6 @@ const Header: React.FC<Props> = (props) => (
               }
             `}
           >
-            <Menu.Item name="members" as={Link} to="/members" />
-            <Menu.Item name="blogs" as={Link} to="/blogs" />
             {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
               <Menu.Item
                 name={node.frontmatter.title}
@@ -69,6 +67,9 @@ const Header: React.FC<Props> = (props) => (
                 to={node.fields.slug}
               />
             ))}
+            <Menu.Item name="members" as={Link} to="/members" />
+            <Menu.Item name="blogs" as={Link} to="/blogs" />
+            <Menu.Item name="members" as={Link} to="/events" />
             <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" />
           </Menu>
         </div>
