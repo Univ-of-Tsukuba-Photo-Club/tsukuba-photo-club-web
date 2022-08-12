@@ -67,10 +67,9 @@ const Members: React.FC = () => {
         <div
           css={css({
             maxWidth: "80vw",
-            alignItems: "center",
           })}
         >
-        <Card.Group itemsPerRow={5} doubling stackable>
+        <Card.Group centered itemsPerRow={5} doubling stackable>
           {members.map(({ node }) => {
             return (
               <Card key={node.fields.slug}>
