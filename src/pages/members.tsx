@@ -64,6 +64,11 @@ const Members: React.FC = () => {
         <p css={css({ textAlign: "center", paddingBottom: "12px" })}>
           現在、追加中です。
         </p>
+        <div
+          css={css({
+            maxWidth: "80vw",
+          })}
+        >
         <Card.Group itemsPerRow={5} doubling stackable>
           {members.map(({ node }) => {
             return (
@@ -124,6 +129,7 @@ const Members: React.FC = () => {
             )
           })}
         </Card.Group>
+        </div>
       </PageContainer>
     </>
   )
