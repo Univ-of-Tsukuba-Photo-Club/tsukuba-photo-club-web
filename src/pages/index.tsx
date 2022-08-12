@@ -32,7 +32,6 @@ const IndexPage: React.FC = () => (
           ]}
         />
       </div>
-      <Footer />
     </div>
   </>
 )
