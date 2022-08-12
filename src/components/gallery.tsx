@@ -42,4 +42,4 @@ const Gallery: React.FC<Props> = (props) => {
   )
 }
 
-export default Slideshow
+export default Gallery
