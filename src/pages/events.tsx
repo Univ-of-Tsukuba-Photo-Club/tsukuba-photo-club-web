@@ -11,7 +11,7 @@ const Events: React.FC = () => {
       query {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: { fields: { collection: { eq: "blog" } } }
+          filter: { fields: { collection: { eq: "event" } } }
         ) {
           edges {
             node {
