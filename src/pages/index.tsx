@@ -14,7 +14,7 @@ const IndexPage: React.FC = () => (
         width: "100vw",
         maxWidth: "100vh",
         height: "75vw",
-        maxHeight: "75vh",
+        maxHeight: "75vh"
       })}
     >
       <Slideshow
