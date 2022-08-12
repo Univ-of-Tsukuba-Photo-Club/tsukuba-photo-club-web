@@ -60,8 +60,8 @@ const Header: React.FC<Props> = (props) => (
               }
             `}
           >
-{/*
-コメントアウト　静的ページを探し出しリンクを生成する機能
+            <Menu.Item name="members" as={Link} to="/members" />
+            <Menu.Item name="blogs" as={Link} to="/blogs" />
             {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
               <Menu.Item
                 name={node.frontmatter.title}
@@ -69,12 +69,6 @@ const Header: React.FC<Props> = (props) => (
                 to={node.fields.slug}
               />
             ))}
-*/}
-            <Menu.Item name="about" as={Link} to="/about" />
-            <Menu.Item name="blogs" as={Link} to="/blogs" />
-            <Menu.Item name="events" as={Link} to="/events" />
-            <Menu.Item name="members" as={Link} to="/members" />
-            <Menu.Item name="join" as={Link} to="/2022年度新歓" />
             <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" />
           </Menu>
         </div>
