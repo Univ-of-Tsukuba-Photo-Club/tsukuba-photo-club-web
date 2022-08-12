@@ -22,6 +22,7 @@ const IndexPage: React.FC = () => (
       <div
         css={css({
           width: "100vw",
+          height: "75vw",
           maxHeight: "90vh",
         })}
       >
