@@ -60,13 +60,16 @@ const Header: React.FC<Props> = (props) => (
               }
             `}
           >
-<!--            {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
+{/*
+コメントアウト　静的ページを探し出しリンクを生成する機能
+            {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
               <Menu.Item
                 name={node.frontmatter.title}
                 as={Link}
                 to={node.fields.slug}
               />
-            ))}-->
+            ))}
+*/}
             <Menu.Item name="about" as={Link} to="/about" />
             <Menu.Item name="blogs" as={Link} to="/blogs" />
             <Menu.Item name="events" as={Link} to="/events" />
