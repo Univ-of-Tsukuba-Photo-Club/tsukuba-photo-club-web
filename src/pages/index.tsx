@@ -25,7 +25,7 @@ const IndexPage: React.FC = () => (
           maxWidth: "100vh",
           height: "75vw",
           maxHeight: "75vh",
-          align: "center",
+          alignSelf: "center",
         })}
       >
         <Slideshow
