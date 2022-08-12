@@ -124,7 +124,6 @@ const Members: React.FC = () => {
             )
           })}
         </Card.Group>
-        </div>
       </PageContainer>
     </>
   )
