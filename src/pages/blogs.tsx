@@ -23,6 +23,13 @@ const Blogs: React.FC = () => {
                 date(formatString: "MMMM DD, YYYY")
                 title
                 description
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 400, maxHeight: 400) {
+                      ...GatsbyImageSharpFluid_noBase64
+                    }
+                  }
+                }
               }
             }
           }
@@ -47,6 +54,9 @@ const Blogs: React.FC = () => {
                 to={node.fields.slug}
                 css={css({ padding: "12px !important" })}
               >
+                {node.frontmatter.image && (
+                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                )}
                 <Card.Content>
                   <Header as="h2">{node.frontmatter.title}</Header>
                   <div
