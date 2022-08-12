@@ -60,16 +60,18 @@ const Header: React.FC<Props> = (props) => (
               }
             `}
           >
-            {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
+<!--            {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
               <Menu.Item
                 name={node.frontmatter.title}
                 as={Link}
                 to={node.fields.slug}
               />
-            ))}
-            <Menu.Item name="members" as={Link} to="/members" />
+            ))}-->
+            <Menu.Item name="about" as={Link} to="/about" />
             <Menu.Item name="blogs" as={Link} to="/blogs" />
-            <Menu.Item name="members" as={Link} to="/events" />
+            <Menu.Item name="events" as={Link} to="/events" />
+            <Menu.Item name="members" as={Link} to="/members" />
+            <Menu.Item name="join" as={Link} to="/2022年度新歓" />
             <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" />
           </Menu>
         </div>
