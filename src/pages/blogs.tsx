@@ -4,6 +4,7 @@ import Meta from "../components/meta"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { Card, CardGroup, Header } from "semantic-ui-react"
 import css from "@emotion/css"
+import Img from "gatsby-image"
 
 const Blogs: React.FC = () => {
   const { allMarkdownRemark } = useStaticQuery(
