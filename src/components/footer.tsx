@@ -19,7 +19,7 @@ const Footer: React.FC = () => (
       <p>
         ©︎ 2020 筑波大学写真部
         <div css={css({ fontSize: "10px", marginBottom: "20px !important" })}>
-          当サイトでは、Google Analyticsを使用してアクセス情報の収集、処理を行っています。
+          当サイトでは、Google Analyticsを使用して<br>アクセス情報の収集、処理を行っています。<br>
           詳しくは
           <a
             href="https://policies.google.com/technologies/partner-sites?hl=ja"
