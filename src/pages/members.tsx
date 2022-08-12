@@ -36,7 +36,7 @@ const Members: React.FC = () => {
                 name
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 400, maxHeight: 400) {
+                    fluid(maxWidth: 80vw, maxHeight: 400) {
                       ...GatsbyImageSharpFluid_noBase64
                     }
                   }
@@ -64,14 +64,7 @@ const Members: React.FC = () => {
         <p css={css({ textAlign: "center", paddingBottom: "12px" })}>
           現在、追加中です。
         </p>
-        <div
-          css={css({
-            maxWidth: "80vw",
-            alignSelf: "center",
-            alignItems: "center",
-          })}
-        >
-        <Card.Group centered itemsPerRow={5} doubling stackable>
+        <Card.Group itemsPerRow={5} doubling stackable>
           {members.map(({ node }) => {
             return (
               <Card key={node.fields.slug}>
