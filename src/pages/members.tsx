@@ -36,7 +36,7 @@ const Members: React.FC = () => {
                 name
                 image {
                   childImageSharp {
-                    fluid(maxWidth: "80vw", maxHeight: 400) {
+                    fluid(maxWidth: 400, maxHeight: 400) {
                       ...GatsbyImageSharpFluid_noBase64
                     }
                   }
