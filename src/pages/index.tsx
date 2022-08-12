@@ -19,15 +19,7 @@ const IndexPage: React.FC = () => (
       })}
     >
       <Header />
-      <div
-        css={css({
-          width: "100vw",
-          maxWidth: "140vh",
-          height: "75vw",
-          maxHeight: "105vh",
-          alignSelf: "center",
-        })}
-      >
+      <div>
         <Slideshow
           imageUrls={[
             "https://pbs.twimg.com/media/D3mc_PZV4AED70c?format=jpg&name=4096x4096",
