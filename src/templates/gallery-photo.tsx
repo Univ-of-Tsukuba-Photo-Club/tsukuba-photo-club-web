@@ -14,36 +14,18 @@ type Props = {
 }
 
 const GalleryPhotoTemplate: React.FC<Props> = (props) => {
-  const { allMarkdownRemark } = useStaticQuery(
-    graphql`
-      query {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { fields: { collection: { eq: "gallery" } } }
-        ) {
-          edges {
-            node {
-              excerpt
-              fields {
-                slug
-              }
-              frontmatter {
-                date(formatString: "MMMM DD, YYYY")
-                title
-                description
-                image {
-                  childImageSharp {
-                    fluid(maxWidth: 1600, maxHeight: 1600) {
-                      ...GatsbyImageSharpFluid_noBase64
-                    }
-                  }
-                }
-              }
-            }
+  const photo = useStaticQuery(
+  graphql`
+      {
+      testFluid: file(relativePath: { eq: { image } }) {
+          childImageSharp {
+          fluid(maxWidth: 1600) {
+              ...GatsbyImageSharpFluid
           }
-        }
+          }
       }
-    `
+      }
+  `
   )
   
   const post = props.data.markdownRemark
@@ -65,9 +47,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             maxheight: "80vw",
           })}
         >
-          {node.frontmatter.image && (
-            <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
-          )}
+          <Img fluid={photo.testFluid.childImageSharp.fluid} />
         </div>
         <Header
           as="h1"
