@@ -17,7 +17,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
   const photo = useStaticQuery(
   graphql`
       {
-      testFluid: file(relativePath: { eq: { image } }) {
+      testFluid: file(relativePath: { eq: props.data.markdownRemark.frontmatter.title }) {
           childImageSharp {
           fluid(maxWidth: 1600) {
               ...GatsbyImageSharpFluid
