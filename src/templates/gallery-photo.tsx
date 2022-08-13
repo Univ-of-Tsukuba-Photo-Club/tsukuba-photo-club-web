@@ -16,7 +16,7 @@ type Props = {
   location: any
 }
 
-const GalleryPhotoTemplate: React.FC<Props> = (props) => {
+const GalleryPhotoTemplate: React.FC<Props> = ({ props, title, text = true }) => {
   const post = props.data.markdownRemark
   const { previous, next } = props.pageContext
 
