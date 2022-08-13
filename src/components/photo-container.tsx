@@ -25,7 +25,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
           height: 0px;
         }
         @media (max-aspect-ratio: 1/1) {
-          height: auto;
+          height: 100px;
         }
       `}
     >
