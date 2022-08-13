@@ -44,7 +44,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         <span
           css={css`
             img {
-              max-width: 80vh;
+              width: 80vh;
               object-fit: contain;
             }
             p {
