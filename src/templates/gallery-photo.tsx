@@ -24,10 +24,16 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         image={post.frontmatter.image?.publicURL}
       />
       <PhotoContainer>
+        <div
+          css={css({
+            width: "80vh",
+            maxWidth: "80vw"
+          })}
+        >
         <span
           css={css`
             img {
-              width: 80vh;
+              max-width: 100%;
               object-fit: contain;
             }
             p {
@@ -36,10 +42,12 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
           `}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        </div>
         <Header
-          as="h1"
+          as="h3"
           css={css({
             fontFamily: "sans-serif !important;",
+            alignText: "center"
           })}
         >
           {post.frontmatter.title}
@@ -47,10 +55,13 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         <div
           css={css({
             color: "grey",
-            marginBottom: "20px",
+            alignText: "center"
           })}
         >
           {post.frontmatter.date}
+        </div>
+        <div>
+          {post.frontmatter.description}
         </div>
         <hr css={css({ marginTop: "24px" })} />
         <ul
