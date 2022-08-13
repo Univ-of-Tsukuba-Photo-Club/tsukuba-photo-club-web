@@ -10,7 +10,7 @@ type Props = {
   text?: boolean
 }
 
-const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
+const PageContainer: React.FC<Props> = ({ title, children, text = false }) => (
   <div
     css={css({
       display: "flex",
