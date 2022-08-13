@@ -2,7 +2,7 @@ import React, { ReactNode } from "react"
 import AppHeader from "./header"
 import { Container, Header, Divider } from "semantic-ui-react"
 import css from "@emotion/css"
-import Footer from "./footer"
+import Footer from "./gallery-footer"
 
 type Props = {
   title?: string
@@ -19,6 +19,15 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
       height: "100%",
     })}
   >
+    <div
+      css={css` 
+        @media (min-aspect-ratio: 1/1) {
+          height: 0px;
+        }
+      `}
+    >
+      <Header />
+    </div>
     <Container
       text={text}
       css={css` 
