@@ -1,7 +1,7 @@
 import React from "react"
 import PhotoContainer from "../components/photo-container"
 import Meta from "../components/meta"
-import { graphql, Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import css from "@emotion/css"
 import { Button, Header, Icon } from "semantic-ui-react"
 import ShareButtons from "../components/share-buttons"
