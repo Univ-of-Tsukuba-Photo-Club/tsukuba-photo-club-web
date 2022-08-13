@@ -69,7 +69,7 @@ const Members: React.FC = () => {
             return (
               <Card key={node.fields.slug}>
                 {node.frontmatter.image && (
-                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                  <Img fluid={node.frontmatter.image.childImageSharp.fluid}   imgStyles={{ objectPosition: 'center', objectFit: 'contain', }}/>
                 )}
                 <Card.Content>
                   <Card.Header>{node.frontmatter.name}</Card.Header>
