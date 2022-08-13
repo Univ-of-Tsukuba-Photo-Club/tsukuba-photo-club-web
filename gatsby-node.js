@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
+  const galleryPhoto = path.resolve(`./src/templates/gallery-photo.tsx`)
   const staticPage = path.resolve(`./src/templates/static-page.tsx`)
   const result = await graphql(
     `
@@ -50,9 +51,27 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     })
+  
+  const isPhoto = (page) => page.node.fields.slug.startsWith("/gallery/")
+  pages
+    .filter((page) => isPhoto(page))
+    .forEach((post, index, posts) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
+      createPage({
+        path: post.node.fields.slug,
+        component: galleryPhoto,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
 
   pages
-    .filter((page) => !isPost(page))
+    .filter((page) => !isPost(page) && !isPhoto(page))
     .forEach((post) => {
       createPage({
         path: post.node.fields.slug,
@@ -71,6 +90,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     let slug = createFilePath({ node, getNode })
     if (node.fileAbsolutePath.includes("content/blog")) {
       slug = `/blogs${slug}`
+    }
+    if (node.fileAbsolutePath.includes("content/gallery")) {
+      slug = `/gallery${slug}`
     }
 
     createNodeField({
