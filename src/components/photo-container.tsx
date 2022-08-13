@@ -21,17 +21,15 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
   >
     <Container
       text={text}
-      css={css`
+      css={css` 
+        @media (max-width: 800px) {
+          padding-top: 16px;
+        }
+        padding-top: 32px;
         flex: 1 0 auto;
       `}
     >
-      <div
-        css={css({
-          paddingTop: "12px",
-        })}
-      >
-        {children}
-      </div>
+      {children}
     </Container>
     <Footer />
   </div>
