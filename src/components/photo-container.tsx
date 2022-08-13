@@ -19,27 +19,12 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
       height: "100%",
     })}
   >
-    <AppHeader />
     <Container
       text={text}
       css={css`
-        @media (max-width: 800px) {
-          padding-top: 32px;
-        }
-        padding-top: 64px;
         flex: 1 0 auto;
       `}
     >
-      {title ? (
-        <>
-          <Header as="h1" textAlign="center">
-            {title}
-          </Header>
-          <Divider />
-        </>
-      ) : (
-        <></>
-      )}
       <div
         css={css({
           paddingTop: "12px",
