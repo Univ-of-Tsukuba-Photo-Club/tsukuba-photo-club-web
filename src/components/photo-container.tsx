@@ -10,7 +10,7 @@ type Props = {
   text?: boolean
 }
 
-const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
+const PageContainer: React.FC<Props> = ({ title, children, text = false }) => (
   <div
     css={css({
       display: "flex",
@@ -23,7 +23,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
     <Container
       text={text}
       css={css`
-        @media (max-width: 80vw) {
+        @media (max-width: 800px) {
           padding-top: 32px;
         }
         padding-top: 64px;
