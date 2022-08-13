@@ -96,7 +96,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             )}
           </li>
         </ul>
-      </PageContainer>
+      </PhotoContainer>
     </>
   )
 }
