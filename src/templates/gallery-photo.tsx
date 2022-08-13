@@ -1,5 +1,5 @@
 import React from "react"
-import PageContainer from "../components/page-container"
+import PhotoContainer from "../components/photo-container"
 import Meta from "../components/meta"
 import { graphql, Link } from "gatsby"
 import css from "@emotion/css"
@@ -23,7 +23,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         description={post.frontmatter.description}
         image={post.frontmatter.image?.publicURL}
       />
-      <PageContainer>
+      <PhotoContainer>
         <Header
           as="h1"
           css={css({
