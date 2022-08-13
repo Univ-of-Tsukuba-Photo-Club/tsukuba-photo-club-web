@@ -5,6 +5,7 @@ import { graphql, Link } from "gatsby"
 import css from "@emotion/css"
 import { Button, Header, Icon } from "semantic-ui-react"
 import ShareButtons from "../components/share-buttons"
+import Img from "gatsby-image"
 
 type Props = {
   data: any
@@ -13,6 +14,38 @@ type Props = {
 }
 
 const GalleryPhotoTemplate: React.FC<Props> = (props) => {
+  const { allMarkdownRemark } = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { fields: { collection: { eq: "gallery" } } }
+        ) {
+          edges {
+            node {
+              excerpt
+              fields {
+                slug
+              }
+              frontmatter {
+                date(formatString: "MMMM DD, YYYY")
+                title
+                description
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 1600, maxHeight: 1600) {
+                      ...GatsbyImageSharpFluid_noBase64
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+  
   const post = props.data.markdownRemark
   const { previous, next } = props.pageContext
 
@@ -24,6 +57,18 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         image={post.frontmatter.image?.publicURL}
       />
       <PhotoContainer>
+        <div
+          css={css({
+            width: "80vh",
+            height: "80vh",
+            maxwidth: "80vw",
+            maxheight: "80vw",
+          })}
+        >
+          {node.frontmatter.image && (
+            <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+          )}
+        </div>
         <Header
           as="h1"
           css={css({
