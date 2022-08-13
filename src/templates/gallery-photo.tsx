@@ -1,7 +1,7 @@
 import React from "react"
 import PhotoContainer from "../components/photo-container"
 import Meta from "../components/meta"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import css from "@emotion/css"
 import { Button, Header, Icon } from "semantic-ui-react"
 import ShareButtons from "../components/share-buttons"
@@ -13,20 +13,6 @@ type Props = {
 }
 
 const GalleryPhotoTemplate: React.FC<Props> = (props) => {
-  const photo = useStaticQuery(
-  graphql`
-      {
-      testFluid: file(relativePath: { eq: props.data.markdownRemark.frontmatter.title }) {
-          childImageSharp {
-          fluid(maxWidth: 1600) {
-              ...GatsbyImageSharpFluid
-          }
-          }
-      }
-      }
-  `
-  )
-  
   const post = props.data.markdownRemark
   const { previous, next } = props.pageContext
 
@@ -66,7 +52,6 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         >
           {post.frontmatter.date}
         </div>
-        <ShareButtons href={props.location.href} />
         <hr css={css({ marginTop: "24px" })} />
         <ul
           style={{
@@ -93,6 +78,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
               </Button>
             )}
           </li>
+          <ShareButtons href={props.location.href} />
           <li>
             {next && (
               <Button
