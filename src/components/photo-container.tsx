@@ -24,16 +24,16 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
         @media (min-aspect-ratio: 1/1) {
           height: 0px;
         }
+        @media (max-aspect-ratio: 1/1) {
+          height: auto;
+        }
       `}
     >
       <Header />
     </div>
     <Container
       text={text}
-      css={css` 
-        @media (max-width: 800px) {
-          padding-top: 16px;
-        }
+      css={css`
         padding-top: 32px;
         flex: 1 0 auto;
       `}
