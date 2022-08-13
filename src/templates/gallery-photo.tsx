@@ -36,33 +36,24 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
           `}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <div
+        <Header
+          as="h3"
           css={css({
-            alignItems: "center",
-            margintop: "24px"
+            fontFamily: "sans-serif !important;",
+            textAlign: "center"
           })}
         >
-          <Header
-            as="h3"
-            css={css({
-              fontFamily: "sans-serif !important;",
-              alignText: "center"
-            })}
-          >
-            {post.frontmatter.title}
-          </Header>
-        </div>
+          {post.frontmatter.title}
+        </Header>
         <div
           css={css({
             color: "grey",
-            alignText: "center"
+            textAlign: "center"
           })}
         >
           {post.frontmatter.date}
         </div>
-        <div>
-          {post.frontmatter.description}
-        </div>
+        {post.frontmatter.description}
         <hr css={css({ marginTop: "24px" })} />
         <ul
           style={{
