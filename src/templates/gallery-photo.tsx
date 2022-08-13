@@ -38,7 +38,8 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         />
         <div
           css={css({
-            alignSelf: "center"
+            alignItems: "center",
+            margintop: "24px"
           })}
         >
           <Header
