@@ -5,7 +5,6 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import css from "@emotion/css"
 import { Button, Header, Icon } from "semantic-ui-react"
 import ShareButtons from "../components/share-buttons"
-import Img from "gatsby-image"
 
 type Props = {
   data: any
@@ -39,16 +38,18 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         image={post.frontmatter.image?.publicURL}
       />
       <PhotoContainer>
-        <div
-          css={css({
-            width: "80vh",
-            height: "80vh",
-            maxwidth: "80vw",
-            maxheight: "80vw",
-          })}
-        >
-          <Img fluid={photo.testFluid.childImageSharp.fluid} />
-        </div>
+        <span
+          css={css`
+            img {
+              width: 80vh;
+              object-fit: contain;
+            }
+            p {
+              line-height: 32px !important;
+            }
+          `}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <Header
           as="h1"
           css={css({
@@ -66,18 +67,6 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
           {post.frontmatter.date}
         </div>
         <ShareButtons href={props.location.href} />
-        <span
-          css={css`
-            img {
-              width: 80vh;
-              object-fit: contain;
-            }
-            p {
-              line-height: 32px !important;
-            }
-          `}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
         <hr css={css({ marginTop: "24px" })} />
         <ul
           style={{
