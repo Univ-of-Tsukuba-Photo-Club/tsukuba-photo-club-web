@@ -45,15 +45,17 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         >
           {post.frontmatter.title}
         </Header>
-        <div
+        <p
           css={css({
             color: "grey",
             textAlign: "center"
           })}
         >
           {post.frontmatter.date}
-        </div>
-        {post.frontmatter.description}
+        </p>
+        <p>
+          {post.frontmatter.description}
+        </p>
         <hr css={css({ marginTop: "24px" })} />
         <ul
           style={{
