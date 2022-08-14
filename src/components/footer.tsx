@@ -2,15 +2,7 @@ import React from "react"
 import css from "@emotion/css"
 import { Icon } from "semantic-ui-react"
 
-const yesmargin = {
-  margintop: 16 +'px'
-}
-const nomargin = {
-  margintop: -4 + 'px'
-}
-
-const Footer: React.FC = ({ marginbetween = "yesmargin" }) => (
-  <div style = { marginbetween } >
+const Footer: React.FC = () => (
   <div
     css={css({
       alignSelf: "center",
@@ -18,6 +10,7 @@ const Footer: React.FC = ({ marginbetween = "yesmargin" }) => (
       textAlign: "center",
       display: "flex",
       justifyContent: "center",
+      marginTop: "16px",
       marginBottom: "4px",
       alignItems: "flex-end",
     })}
@@ -44,7 +37,6 @@ const Footer: React.FC = ({ marginbetween = "yesmargin" }) => (
         </div>
       </p>
     </div>
-  </div>
   </div>
 )
 
