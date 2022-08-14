@@ -1,43 +1,63 @@
 import React from "react"
 import css from "@emotion/css"
-import { Icon } from "semantic-ui-react"
+import { Menu } from "semantic-ui-react"
+import { graphql, StaticQuery, Link } from "gatsby"
+import Img from "gatsby-image"
 
-const GalleryFooter: React.FC = () => (
-  <div
-    css={css({
-      alignSelf: "center",
-      width: "100vw",
-      textAlign: "center",
-      display: "flex",
-      justifyContent: "center",
-      marginTop: "16px",
-      marginBottom: "4px",
-      alignItems: "flex-end",
-    })}
-  >
-    <div>
-      <p>
-        ©︎ 2020 筑波大学写真部
-        <div css={css({ fontSize: "10px", marginBottom: "20px !important" })}>
-          <span css={css({ display: "inline-block" })}>
-            <span css={css({ display: "inline-block" })}>当サイトでは、Google Analyticsを使用して</span>
-            <span css={css({ display: "inline-block" })}>アクセス情報の収集・処理を行っています。</span>
-          </span>
-          <span css={css({ display: "inline-block" })}>
-            詳しくは
-            <a
-              href="https://policies.google.com/technologies/partner-sites?hl=ja"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              こちら
-            </a>
-            をご覧ください。
-          </span>
+type Props = {
+  fixed?: boolean
+}
+
+const GalleryLogo: React.FC<Props> = (props) => (
+  <StaticQuery
+    query={query}
+    render={(data) => (
+      <div
+        css={css({
+          backgroundColor: props.fixed
+            ? "rgba(255, 255, 255, 0.85)"
+            : "rgba(238, 238, 238, 0.25)",
+          position: props.fixed ? "fixed" : undefined,
+          width: "100vw",
+          zIndex: 1,
+          boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+        })}
+      >
+        <div
+          css={css`
+            width: 100%;
+            display: flex;
+            @media (max-width: 800px) {
+              align-items: center;
+              flex-direction: column;
+            }
+          `}
+        >
+          <Link
+            to="/"
+            css={css`
+              margin-right: 0;
+              margin-left: 0;
+            `}
+          >
+            <Img fixed={data.file.childImageSharp.fixed} />
+          </Link>
         </div>
-      </p>
-    </div>
-  </div>
+      </div>
+    )}
+  />
 )
 
-export default GalleryFooter
+export default GalleryLogo
+
+const query = graphql`
+  query {
+    file(relativePath: { eq: "logo.png" }) {
+      childImageSharp {
+        fixed(width: 300, height: 80) {
+          ...GatsbyImageSharpFixed_noBase64
+        }
+      }
+    }
+  }
+`
