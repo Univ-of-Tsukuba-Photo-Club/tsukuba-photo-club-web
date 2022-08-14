@@ -70,9 +70,8 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             {previous && (
               <Button
                 basic
-                color='grey'
+                color='black'
                 icon
-                labelPosition="left"
                 as={Link}
                 to={previous.fields.slug}
                 style={{
@@ -80,7 +79,6 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 }}
               >
                 <Icon name="arrow left" />
-                Backああああああああ
               </Button>
             )}
           </li>
@@ -90,7 +88,6 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 basic
                 color='black'
                 icon
-                labelPosition="right"
                 as={Link}
                 to={next.fields.slug}
                 style={{
@@ -98,7 +95,6 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 }}
               >
                 <Icon name="arrow right" />
-                Nextああああああああ
               </Button>
             )}
           </li>
