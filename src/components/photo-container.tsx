@@ -5,7 +5,6 @@ import { Container, Header, Divider } from "semantic-ui-react"
 import css from "@emotion/css"
 import Footer from "./footer"
 import { graphql, StaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
 
 type Props = {
   title?: string
@@ -22,15 +21,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
       height: "100%",
     })}
   >
-    <div
-      css={css` 
-        @media (min-aspect-ratio: 3/2) {
-          display: none;
-        }
-      `}
-    >
-      <GalleryHeader />
-    </div>
+    <GalleryHeader />
     <Container
       text={text}
       css={css`
@@ -40,15 +31,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
     >
       {children}
     </Container>
-    <div
-      css={css` 
-        @media (max-aspect-ratio: 3/2) {
-          display: none;
-        }
-      `}
-    >
-      <GalleryHeaderMiddle />
-    </div>
+    <GalleryHeader />
     <div
       css={css({
         alignSelf: "center",
@@ -88,15 +71,3 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
 )
 
 export default PageContainer
-
-const query = graphql`
-  query {
-    file(relativePath: { eq: "logo.png" }) {
-      childImageSharp {
-        fixed(width: 300, height: 80) {
-          ...GatsbyImageSharpFixed_noBase64
-        }
-      }
-    }
-  }
-`
