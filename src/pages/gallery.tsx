@@ -53,6 +53,9 @@ const Gallery: React.FC = () => {
                 as={Link}
                 to={node.fields.slug}
               >
+                {node.frontmatter.image && (
+                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                )}
                 <Card.Content>
                   <Card.Header css={css({ textAlign: "center" })}>{node.frontmatter.name}</Card.Header>
                   <Card.Meta css={css({ fontSize: "0.9em !important", textAlign: "center" })}>{node.frontmatter.date}</Card.Meta>
