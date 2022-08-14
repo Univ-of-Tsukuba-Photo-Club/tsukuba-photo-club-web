@@ -82,6 +82,19 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
               </Button>
             )}
           </li>
+          <li>
+            <Button
+              basic
+              color='black'
+              as={Link}
+              to="/gallery"
+              style={{
+                margin: "4px",
+              }}
+            >
+              雙峰祭2022　自由展
+            </Button>
+          </li>
           <li css={css({ marginLeft: "auto" })}>
             {next && (
               <Button
