@@ -88,7 +88,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             {next && (
               <Button
                 basic
-                color='grey'
+                color='black'
                 icon
                 labelPosition="right"
                 as={Link}
@@ -98,7 +98,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 }}
               >
                 <Icon name="arrow right" />
-                Next
+                Nextああああああああ
               </Button>
             )}
           </li>
