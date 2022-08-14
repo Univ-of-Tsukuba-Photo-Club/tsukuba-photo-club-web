@@ -24,12 +24,9 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
         @media (min-aspect-ratio: 1/1) {
           height: 0px;
         }
-        @media (max-aspect-ratio: 1/1) {
-          height: 100px;
-        }
       `}
     >
-      <Header />
+      <AppHeader />
     </div>
     <Container
       text={text}
