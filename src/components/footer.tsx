@@ -3,10 +3,10 @@ import css from "@emotion/css"
 import { Icon } from "semantic-ui-react"
 
 const yesmargin = {
-  margintop: "16px"
+  margintop: 16 +'px'
 }
 const nomargin = {
-  margintop: "-4px"
+  margintop: -4 + 'px'
 }
 
 const Footer: React.FC = ({ marginbetween = "yesmargin" }) => (
