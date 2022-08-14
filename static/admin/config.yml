@@ -28,10 +28,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
-      - { label: "投稿日", name: "date", widget: "datetime" }
-      - { label: "画像", name: "image", widget: "image", required: false }
+      - { label: "撮影者", name: "name", widget: "string" }
+      - { label: "順番", name: "order", widget: "string" }
+      - { label: "サムネイル用画像", name: "image", widget: "image"}
       - { label: "説明", name: "description", widget: "string" }
-      - { label: "本文", name: "body", widget: "markdown" }
+      - { label: "本体用画像", name: "body", widget: "markdown" }
   - name: "static"
     label: "静的ページ"
     folder: "content/static"
