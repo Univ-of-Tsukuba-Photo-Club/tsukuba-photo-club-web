@@ -29,6 +29,20 @@ const GalleryHeaderMiddle: React.FC<Props> = (props) => (
         >
           <Img fixed={data.file.childImageSharp.fixed} />
         </Link>
+        <Menu
+          text
+          css={css`
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-right: -0.5em !important;
+            margin-top: -16px !important;
+            margin-bottom: -8px !important;
+            }
+          `}
+        >
+          <Menu.Item name="gallery" as={Link} to="/gallery" />
+        </Menu>
       </div>
     )}
   />
