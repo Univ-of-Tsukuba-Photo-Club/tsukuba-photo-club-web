@@ -47,8 +47,8 @@ const GalleryHeader: React.FC<Props> = (props) => (
               flex-wrap: wrap;
               justify-content: center;
               margin-right: -0.5em !important;
-              margin-top: 0 !important;
-              margin-bottom: 8px !important;
+              margin-top: -8px !important;
+              margin-bottom: -8px !important;
               }
             `}
           >
