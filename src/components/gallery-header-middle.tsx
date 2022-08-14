@@ -20,20 +20,6 @@ const GalleryHeaderMiddle: React.FC<Props> = (props) => (
           flex-direction: column;
         `}
       >
-        <Menu
-          text
-          css={css`
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-right: -0.5em !important;
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            }
-          `}
-        >
-          <Menu.Item name="gallery" as={Link} to="/gallery"><Header as="h4" css={css({fontFamily: "sans-serif !important;"})}>雙峰祭2022　自由展</Header></Menu.Item>
-        </Menu>
         <Link
           to="/"
           css={css`
