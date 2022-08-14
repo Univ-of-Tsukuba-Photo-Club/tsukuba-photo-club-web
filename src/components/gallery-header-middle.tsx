@@ -20,6 +20,20 @@ const GalleryHeaderMiddle: React.FC<Props> = (props) => (
           flex-direction: column;
         `}
       >
+        <Menu
+          text
+          css={css`
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-right: -0.5em !important;
+            margin-top: 0 !important;
+            margin-bottom: -16px !important;
+            }
+          `}
+        >
+          <Menu.Item name="雙峰祭2022　自由展" as={Link} to="/gallery" />
+        </Menu>
         <Link
           to="/"
           css={css`
@@ -29,20 +43,6 @@ const GalleryHeaderMiddle: React.FC<Props> = (props) => (
         >
           <Img fixed={data.file.childImageSharp.fixed} />
         </Link>
-        <Menu
-          text
-          css={css`
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-right: -0.5em !important;
-            margin-top: -16px !important;
-            margin-bottom: -8px !important;
-            }
-          `}
-        >
-          <Menu.Item name="gallery" as={Link} to="/gallery" />
-        </Menu>
       </div>
     )}
   />
