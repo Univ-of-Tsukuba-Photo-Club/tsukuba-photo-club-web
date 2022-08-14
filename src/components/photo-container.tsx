@@ -19,13 +19,16 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
       height: "100%",
     })}
   >
-    <AppHeader 
+    <div
       css={css` 
         @media (min-aspect-ratio: 1/1) {
           height: 0px;
+          display: none;
         }
       `}
-    />
+    >
+      <AppHeader />
+    </div>
     <Container
       text={text}
       css={css`
