@@ -69,6 +69,8 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
           <li>
             {previous && (
               <Button
+                basic
+                color='grey'
                 icon
                 labelPosition="left"
                 as={Link}
@@ -78,13 +80,15 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 }}
               >
                 <Icon name="arrow left" />
-                Back
+                Backああああああああ
               </Button>
             )}
           </li>
           <li css={css({ marginLeft: "auto" })}>
             {next && (
               <Button
+                basic
+                color='grey'
                 icon
                 labelPosition="right"
                 as={Link}
