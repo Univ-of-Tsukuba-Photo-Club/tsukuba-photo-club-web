@@ -28,11 +28,11 @@ const GalleryHeaderMiddle: React.FC<Props> = (props) => (
             justify-content: center;
             margin-right: -0.5em !important;
             margin-top: 0 !important;
-            margin-bottom: -16px !important;
+            margin-bottom: 0 !important;
             }
           `}
         >
-          <Menu.Item name="雙峰祭2022　自由展" as={Link} to="/gallery" />
+          <Menu.Item name="gallery" as={Link} to="/gallery">雙峰祭2022　自由展</Menu.Item>
         </Menu>
         <Link
           to="/"
