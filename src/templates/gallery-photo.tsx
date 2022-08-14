@@ -95,7 +95,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
               雙峰祭2022　自由展
             </Button>
           </li>
-          <li css={css({ marginLeft: "auto" })}>
+          <li>
             {next && (
               <Button
                 basic
