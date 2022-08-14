@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react"
-import AppHeader from "./header"
+import GalleryLogo from "./gallery-logo"
 import { Container, Header, Divider } from "semantic-ui-react"
 import css from "@emotion/css"
-import Footer from "./gallery-footer"
+import Footer from "./footer"
 
 type Props = {
   title?: string
@@ -27,7 +27,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
         }
       `}
     >
-      <AppHeader />
+      <GalleryLogo />
     </div>
     <Container
       text={text}
@@ -38,6 +38,16 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
     >
       {children}
     </Container>
+    <div
+      css={css` 
+        @media (max-aspect-ratio: 1/1) {
+          height: 0px;
+          display: none;
+        }
+      `}
+    >
+      <GalleryLogo />
+    </div>
     <Footer />
   </div>
 )
