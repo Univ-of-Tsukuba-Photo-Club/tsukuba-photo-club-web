@@ -12,6 +12,14 @@ const GalleryLogo: React.FC<Props> = (props) => (
   <StaticQuery
     query={query}
     render={(data) => (
+    <div
+      css={css` 
+        @media (min-aspect-ratio: 1/1) {
+          height: 0px;
+          display: none;
+        }
+      `}
+    >
       <div
         css={css({
           backgroundColor: props.fixed
@@ -42,6 +50,7 @@ const GalleryLogo: React.FC<Props> = (props) => (
           </Link>
         </div>
       </div>
+    </div>
     )}
   />
 )
