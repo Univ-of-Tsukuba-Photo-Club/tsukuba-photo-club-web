@@ -2,7 +2,7 @@ import React from "react"
 import css from "@emotion/css"
 import { Icon } from "semantic-ui-react"
 
-const Footer: React.FC = () => (
+const Footer: React.FC = ({ marginTop = "16px" }) => (
   <div
     css={css({
       alignSelf: "center",
@@ -10,7 +10,7 @@ const Footer: React.FC = () => (
       textAlign: "center",
       display: "flex",
       justifyContent: "center",
-      marginTop: "16px",
+      marginTop: {marginTop},
       marginBottom: "4px",
       alignItems: "flex-end",
     })}
