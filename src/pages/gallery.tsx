@@ -11,7 +11,7 @@ const Gallery: React.FC = () => {
     graphql`
       query {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { fields: [frontmatter___order], order: ASC }
           filter: { fields: { collection: { eq: "gallery" } } }
         ) {
           edges {
@@ -21,9 +21,9 @@ const Gallery: React.FC = () => {
                 slug
               }
               frontmatter {
-                date(formatString: "MMMM DD, YYYY")
                 title
-                description
+                name
+                order
                 image {
                   childImageSharp {
                     fluid(maxWidth: 400, maxHeight: 400) {
@@ -31,6 +31,7 @@ const Gallery: React.FC = () => {
                     }
                   }
                 }
+                description
               }
             }
           }
@@ -57,8 +58,8 @@ const Gallery: React.FC = () => {
                   <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
                 )}
                 <Card.Content>
-                  <Card.Header css={css({ textAlign: "center" })}>{node.frontmatter.name}</Card.Header>
-                  <Card.Meta css={css({ fontSize: "0.9em !important", textAlign: "center" })}>{node.frontmatter.date}</Card.Meta>
+                  <Card.Header css={css({ textAlign: "center" })}>{node.frontmatter.title}</Card.Header>
+                  <Card.Meta css={css({ fontSize: "0.9em !important", textAlign: "center" })}>{node.frontmatter.name}</Card.Meta>
                 </Card.Content>
               </Card>
             )
