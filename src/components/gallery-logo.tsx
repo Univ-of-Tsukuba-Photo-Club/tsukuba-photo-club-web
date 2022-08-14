@@ -60,22 +60,34 @@ const GalleryLogo: React.FC<Props> = (props) => (
         `}
       >
         <div
-          css={css`
-            width: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          `}
+          css={css({
+            backgroundColor: props.fixed
+              ? "rgba(255, 255, 255, 0.85)"
+              : "rgba(238, 238, 238, 0.25)",
+            position: props.fixed ? "fixed" : undefined,
+            width: "100vw",
+            zIndex: 1,
+            boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+          })}
         >
-          <Link
-            to="/"
+          <div
             css={css`
-              margin-right: 0;
-              margin-left: 0;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
             `}
           >
-            <Img fixed={data.file.childImageSharp.fixed} />
-          </Link>
+            <Link
+              to="/"
+              css={css`
+                margin-right: 0;
+                margin-left: 0;
+              `}
+            >
+              <Img fixed={data.file.childImageSharp.fixed} />
+            </Link>
+          </div>
         </div>
       </div>
     )}
