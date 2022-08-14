@@ -44,7 +44,7 @@ const Gallery: React.FC = () => {
   return (
     <>
       <Meta title="Gallery" />
-      <PageContainer title="Gallery">
+      <PageContainer title="Gallery" text={false}>
         <Card.Group itemsPerRow={5} doubling stackable>
           {posts.map(({ node }) => {
             return (
