@@ -19,7 +19,16 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
       height: "100%",
     })}
   >
-    <GalleryLogo />
+    <div
+      css={css` 
+        @media (min-aspect-ratio: 1/1) {
+          height: 0px;
+          display: none;
+        }
+      `}
+    >
+      <GalleryLogo />
+    </div>
     <Container
       text={text}
       css={css`
@@ -29,7 +38,16 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
     >
       {children}
     </Container>
-    <GalleryLogo />
+    <div
+      css={css` 
+        @media (max-aspect-ratio: 1/1) {
+          height: 0px;
+          display: none;
+        }
+      `}
+    >
+      <GalleryLogo />
+    </div>
     <Footer />
   </div>
 )
