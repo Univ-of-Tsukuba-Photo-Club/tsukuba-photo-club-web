@@ -13,24 +13,32 @@ const GalleryLogo: React.FC<Props> = (props) => (
     query={query}
     render={(data) => (
       <div
-        css={css` 
+        css={css({
           @media (min-aspect-ratio: 1/1) {
-              backgroundColor: props.fixed
-                ? "rgba(255, 255, 255, 0.85)"
-                : "rgba(238, 238, 238, 0.25)";
-              position: props.fixed ? "fixed" : undefined;
-              width: "100vw";
-              zIndex: 1;
-              boxShadow: "0 1px 3px rgba(0,0,0,0.06)";
+            backgroundColor: props.fixed
+              ? "rgba(255, 255, 255, 0.85)"
+              : "rgba(238, 238, 238, 0.25)",
+            position: props.fixed ? "fixed" : undefined,
+            width: "100vw",
+            zIndex: 1,
+            boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
           }
-          align-items: center;
-        `}
+        })}
       >
-        <Link
-          to="/"
+        <div
+          css={css`
+            width: 100%;
+            display: flex;
+            align-items: center;
+            }
+          `}
         >
-          <Img fixed={data.file.childImageSharp.fixed} />
-        </Link>
+          <Link
+            to="/"
+          >
+            <Img fixed={data.file.childImageSharp.fixed} />
+          </Link>
+        </div>
       </div>
     )}
   />
