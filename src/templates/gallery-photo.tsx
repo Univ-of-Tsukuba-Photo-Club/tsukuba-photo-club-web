@@ -82,7 +82,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
               </Button>
             )}
           </li>
-          <li css={css({ marginLeft: "auto" })>
+          <li css={css({ marginLeft: "auto" })}>
             {next && (
               <Button
                 icon
