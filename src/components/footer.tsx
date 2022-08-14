@@ -10,7 +10,7 @@ const nomargin = {
 }
 
 const Footer: React.FC = ({ marginbetween = "yesmargin" }) => (
-  <div style = { marginbetween } />
+  <div style = { marginbetween } ></div>
   <div
     css={css({
       alignSelf: "center",
