@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react"
-import GalleryLogo from "./gallery-logo"
+import GalleryHeader from "./gallery-header"
+import GalleryHeaderMiddle from "./gallery-header-middle"
 import { Container, Header, Divider } from "semantic-ui-react"
 import css from "@emotion/css"
 import Footer from "./footer"
@@ -27,7 +28,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
         }
       `}
     >
-      <GalleryLogo />
+      <GalleryHeader />
     </div>
     <Container
       text={text}
@@ -46,7 +47,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
         }
       `}
     >
-      <GalleryLogo />
+      <GalleryHeaderMiddle />
     </div>
     <Footer />
   </div>
