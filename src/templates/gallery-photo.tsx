@@ -51,7 +51,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             textAlign: "center"
           })}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.name}
         </p>
         <p>
           {post.frontmatter.description}
