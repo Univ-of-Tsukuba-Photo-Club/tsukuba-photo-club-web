@@ -1,6 +1,6 @@
 import React from "react"
 import css from "@emotion/css"
-import { Menu } from "semantic-ui-react"
+import { Header, Menu } from "semantic-ui-react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
@@ -32,7 +32,7 @@ const GalleryHeaderMiddle: React.FC<Props> = (props) => (
             }
           `}
         >
-          <Menu.Item name="gallery" as={Link} to="/gallery">雙峰祭2022　自由展</Menu.Item>
+          <Menu.Item name="gallery" as={Link} to="/gallery"><Header as="h4" css={css({fontFamily: "sans-serif !important;"})}>雙峰祭2022　自由展</Header></Menu.Item>
         </Menu>
         <Link
           to="/"
