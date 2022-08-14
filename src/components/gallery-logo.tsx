@@ -23,13 +23,11 @@ const GalleryLogo: React.FC<Props> = (props) => (
               zIndex: 1;
               boxShadow: "0 1px 3px rgba(0,0,0,0.06)";
           }
+          align-items: center;
         `}
       >
         <Link
           to="/"
-          css={css`
-            align-self: center;
-          `}
         >
           <Img fixed={data.file.childImageSharp.fixed} />
         </Link>
