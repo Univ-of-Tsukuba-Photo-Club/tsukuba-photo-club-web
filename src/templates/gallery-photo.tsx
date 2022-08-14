@@ -78,12 +78,11 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 }}
               >
                 <Icon name="arrow left" />
-                {previous.frontmatter.title}
+                Back
               </Button>
             )}
           </li>
-          <ShareButtons href={props.location.href} />
-          <li>
+          <li css={css({ marginLeft: "auto" })>
             {next && (
               <Button
                 icon
@@ -95,7 +94,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 }}
               >
                 <Icon name="arrow right" />
-                {next.frontmatter.title}
+                Next
               </Button>
             )}
           </li>
