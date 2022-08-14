@@ -47,24 +47,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
         }
       `}
     >
-      <div
-        css={css`
-          width: 100%;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-        `}
-      >
-        <Link
-          to="/"
-          css={css`
-            margin-right: 0;
-            margin-left: 0;
-          `}
-        >
-          <Img fixed={data.file.childImageSharp.fixed} />
-        </Link>
-      </div>
+      <GalleryHeaderMiddle />
     </div>
     <div
       css={css({
