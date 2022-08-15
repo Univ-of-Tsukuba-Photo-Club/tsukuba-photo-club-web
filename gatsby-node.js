@@ -95,6 +95,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-free")) {
       slug = `/gallery-sohosai2022-free${slug}`
     }
+    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-theme")) {
+      slug = `/gallery-sohosai2022-theme${slug}`
+    }
 
     createNodeField({
       node,
