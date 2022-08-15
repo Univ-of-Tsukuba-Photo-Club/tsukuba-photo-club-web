@@ -13,6 +13,13 @@ const GalleryHeader: React.FC<Props> = (props) => (
     query={query}
     render={(data) => (
       <>
+        <div
+          css={css` 
+            @media (min-aspect-ratio: 3/2) {
+              display: none;
+            }
+          `}
+        >
           <div
             css={css({
               backgroundColor: props.fixed
@@ -22,9 +29,6 @@ const GalleryHeader: React.FC<Props> = (props) => (
               width: "100vw",
               zIndex: 1,
               boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
-              @media (min-aspect-ratio: "3/2") {
-                display: "none",
-              }
             })}
           >
             <div
@@ -46,6 +50,7 @@ const GalleryHeader: React.FC<Props> = (props) => (
               </Link>
             </div>
           </div>
+        </div>
         <div
           css={css` 
             @media (max-aspect-ratio: 3/2) {
