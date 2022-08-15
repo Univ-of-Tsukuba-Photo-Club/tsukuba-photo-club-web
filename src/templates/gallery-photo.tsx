@@ -56,7 +56,6 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         <p>
           {post.frontmatter.description}
         </p>
-        <hr css={css({ marginTop: "24px" })} />
         <ul
           style={{
             display: `flex`,
