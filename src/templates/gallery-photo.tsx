@@ -12,7 +12,7 @@ type Props = {
   location: any
 }
 
-const GalleryPhotoTemplate: React.FC<Props> = ({ props, displayhr = true }) => {
+const GalleryPhotoTemplate: React.FC<Props> = (props) => {
   const post = props.data.markdownRemark
   const { previous, next, gallerypath, galleryname } = props.pageContext
 
@@ -56,9 +56,11 @@ const GalleryPhotoTemplate: React.FC<Props> = ({ props, displayhr = true }) => {
         <p>
           {post.frontmatter.description}
         </p>
-        <div style={{ display: displayhr ? "" : "none" }}>
+        {post.frontmatter.title ? (
           <hr css={css({ marginTop: "24px" })} />
-        </div>
+        ) : (
+          <></>
+        )}
         <ul
           style={{
             display: `flex`,
