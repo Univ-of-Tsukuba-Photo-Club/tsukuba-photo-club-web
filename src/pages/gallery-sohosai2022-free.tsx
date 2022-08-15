@@ -51,8 +51,7 @@ const Gallery: React.FC = () => {
             return (
               <Card
                 css={css`
-                  box-shadow: none;
-                  @media (max-aspect-ratio: 3/2) {
+                  @media (max-width: 750px) {
                     pointer-events: none;
                   }
                 `}
@@ -66,7 +65,7 @@ const Gallery: React.FC = () => {
                 <Card.Content>
                   <Card.Header css={css({ textAlign: "center" })}>{node.frontmatter.title}</Card.Header>
                   <Card.Meta css={css({ fontSize: "0.9em !important", textAlign: "center" })}>{node.frontmatter.name}</Card.Meta>
-                  <Card.Description>{node.frontmatter.description}</Card.Description>
+                  <Card.Description css={css` @media (min-width: 750px) { display: none; } `}>{node.frontmatter.description}</Card.Description>
                 </Card.Content>
               </Card>
             )
