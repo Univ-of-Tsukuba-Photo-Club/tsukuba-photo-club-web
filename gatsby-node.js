@@ -53,9 +53,28 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   
   const isPhoto = (page) => page.node.fields.slug.startsWith("/gallery")
+  
   const isSohosai2022Free = (page) => page.node.fields.slug.startsWith("/gallery-sohosai2022-free/")
   pages
-    .filter((page) => isPhoto(page))
+    .filter((page) => isSohosai2022Free(page))
+    .forEach((post, index, posts) => {
+      const previous = index === 0 ? null : posts[index - 1].node
+      const next = index === posts.length - 1 ? null : posts[index + 1].node
+
+      createPage({
+        path: post.node.fields.slug,
+        component: galleryPhoto,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+  
+  const isSohosai2022Theme = (page) => page.node.fields.slug.startsWith("/gallery-sohosai2022-theme/")
+  pages
+    .filter((page) => isSohosai2022Theme(page))
     .forEach((post, index, posts) => {
       const previous = index === 0 ? null : posts[index - 1].node
       const next = index === posts.length - 1 ? null : posts[index + 1].node
