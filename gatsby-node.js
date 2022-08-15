@@ -68,7 +68,8 @@ exports.createPages = async ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
-          gallery: "/gallery-sohosai2022-free",
+          gallerypath: "/gallery-sohosai2022-free",
+          galleryname: "雙峰祭2022　自由展",
         },
       })
     })
@@ -87,7 +88,8 @@ exports.createPages = async ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
-          gallery: "/gallery-sohosai2022-theme",
+          gallerypath: "/gallery-sohosai2022-theme",
+          galleryname: "雙峰祭2022　テーマ展",
         },
       })
     })
