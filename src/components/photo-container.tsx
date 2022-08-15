@@ -23,7 +23,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
   >
     <div
       css={css` 
-        @media (min-aspect-ratio: 3/2) {
+        @media (min-aspect-ratio: 2/3) {
           height: 0px;
           display: none;
         }
@@ -42,7 +42,7 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
     </Container>
     <div
       css={css` 
-        @media (max-aspect-ratio: 3/2) {
+        @media (max-aspect-ratio: 2/3) {
           height: 0px;
           display: none;
         }
