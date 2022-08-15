@@ -14,7 +14,7 @@ type Props = {
 
 const GalleryPhotoTemplate: React.FC<Props> = (props) => {
   const post = props.data.markdownRemark
-  const { previous, next } = props.pageContext
+  const { previous, next, gallerypath, galleryname } = props.pageContext
 
   return (
     <>
