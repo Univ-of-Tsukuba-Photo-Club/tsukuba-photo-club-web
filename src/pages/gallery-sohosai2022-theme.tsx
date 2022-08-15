@@ -46,7 +46,16 @@ const Gallery: React.FC = () => {
         <Card.Group itemsPerRow={3} doubling stackable>
           {posts.map(({ node }) => {
             return (
-              <Card css={css` pointer-events: none; `} >
+              <Card
+                css={css`
+                  @media (max-width: 750px) {
+                    pointer-events: none;
+                  }
+                `}
+                key={node.fields.slug}
+                as={Link}
+                to={node.fields.slug}
+              >
                 {node.frontmatter.image && (
                   <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
                 )}
