@@ -49,7 +49,13 @@ const Gallery: React.FC = () => {
         <Card.Group itemsPerRow={5} doubling stackable>
           {posts.map(({ node }) => {
             return (
-              <Card css={css` box-shadow: none; `}
+              <Card
+                css={css`
+                  box-shadow: none;
+                  @media (max-aspect-ratio: 3/2) {
+                    pointer-events: none;
+                  }
+                `}
                 key={node.fields.slug}
                 as={Link}
                 to={node.fields.slug}
