@@ -21,7 +21,16 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
       height: "100%",
     })}
   >
-    <GalleryHeader />
+    <div
+      css={css` 
+        @media (min-aspect-ratio: 3/2) {
+          height: 0px;
+          display: none;
+        }
+      `}
+    >
+      <GalleryHeader />
+    </div>
     <Container
       text={text}
       css={css`
@@ -31,7 +40,16 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
     >
       {children}
     </Container>
-    <GalleryHeader />
+    <div
+      css={css` 
+        @media (max-aspect-ratio: 3/2) {
+          height: 0px;
+          display: none;
+        }
+      `}
+    >
+      <GalleryHeaderMiddle />
+    </div>
     <div
       css={css({
         alignSelf: "center",
