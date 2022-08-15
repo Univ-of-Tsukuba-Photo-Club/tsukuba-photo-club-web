@@ -68,6 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
+          gallery: "/gallery-sohosai2022-free",
         },
       })
     })
@@ -86,6 +87,7 @@ exports.createPages = async ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
+          gallery: "/gallery-sohosai2022-theme",
         },
       })
     })
