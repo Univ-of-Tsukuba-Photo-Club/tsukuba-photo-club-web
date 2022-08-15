@@ -16,6 +16,7 @@ const GalleryHeader: React.FC<Props> = (props) => (
         <div
           css={css` 
             @media (min-aspect-ratio: 3/2) {
+              height: 0px;
               display: none;
             }
           `}
