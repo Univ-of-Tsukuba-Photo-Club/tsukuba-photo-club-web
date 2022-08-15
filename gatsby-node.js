@@ -52,8 +52,8 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
   
-  const isPhoto = (page) => page.node.fields.slug.startsWith("/gallery/")
-  const isSohosai2022Free = (page) => page.node.fields.slug.startsWith("/gallery/sohosai2022-free/")
+  const isPhoto = (page) => page.node.fields.slug.startsWith("/gallery")
+  const isSohosai2022Free = (page) => page.node.fields.slug.startsWith("/gallery-sohosai2022-free/")
   pages
     .filter((page) => isSohosai2022Free(page))
     .forEach((post, index, posts) => {
@@ -92,8 +92,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.fileAbsolutePath.includes("content/blog")) {
       slug = `/blogs${slug}`
     }
-    if (node.fileAbsolutePath.includes("content/gallery")) {
-      slug = `/gallery${slug}`
+    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-free")) {
+      slug = `/gallery-sohosai2022-free${slug}`
     }
 
     createNodeField({
