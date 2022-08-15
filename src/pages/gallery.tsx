@@ -49,7 +49,7 @@ const Gallery: React.FC = () => {
         <Card.Group itemsPerRow={5} doubling stackable>
           {posts.map(({ node }) => {
             return (
-              <Card css={css({ boxShadow: "none" })}
+              <Card css={css({ border: "none" })}
                 key={node.fields.slug}
                 as={Link}
                 to={node.fields.slug}
