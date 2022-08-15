@@ -53,8 +53,9 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   
   const isPhoto = (page) => page.node.fields.slug.startsWith("/gallery/")
+  const isSohosai2022Free = (page) => page.node.fields.slug.startsWith("/gallery/sohosai2022-free/")
   pages
-    .filter((page) => isPhoto(page))
+    .filter((page) => isSohosai2022Free(page))
     .forEach((post, index, posts) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
