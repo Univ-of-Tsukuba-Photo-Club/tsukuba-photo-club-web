@@ -32,7 +32,13 @@ const PageContainer: React.FC<Props> = ({ title, children, text = true }) => (
     >
       {title ? (
         <>
-          <Header as="h1" textAlign="center">
+          <Header
+            as="h1" 
+            css={css({
+              fontFamily: "sans-serif !important;",
+              textAlign: "center"
+            })}
+          >
             {title}
           </Header>
           <Divider />
