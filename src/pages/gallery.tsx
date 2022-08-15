@@ -12,7 +12,7 @@ const Gallery: React.FC = () => {
       query {
         allMarkdownRemark(
           sort: { fields: [frontmatter___order], order: ASC }
-          filter: { fields: { collection: { eq: "gallery-sohosai2022-free" } } }
+          filter: { fields: { collection: { eq: "gallery" } } }
         ) {
           edges {
             node {
