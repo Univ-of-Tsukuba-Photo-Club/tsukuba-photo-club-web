@@ -49,7 +49,7 @@ const Gallery: React.FC = () => {
         <Card.Group itemsPerRow={5} doubling stackable>
           {posts.map(({ node }) => {
             return (
-              <Card css={css({ border: "none" })}
+              <Card css={css` box-shadow: none; `}
                 key={node.fields.slug}
                 as={Link}
                 to={node.fields.slug}
@@ -60,6 +60,7 @@ const Gallery: React.FC = () => {
                 <Card.Content>
                   <Card.Header css={css({ textAlign: "center" })}>{node.frontmatter.title}</Card.Header>
                   <Card.Meta css={css({ fontSize: "0.9em !important", textAlign: "center" })}>{node.frontmatter.name}</Card.Meta>
+                  <Card.Description>{node.frontmatter.description}</Card.Description>
                 </Card.Content>
               </Card>
             )
