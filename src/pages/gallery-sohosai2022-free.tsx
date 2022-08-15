@@ -44,8 +44,8 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <Meta title="Gallery" />
-      <PageContainer title="Gallery" text={false}>
+      <Meta title="雙峰祭2022　自由展" />
+      <PageContainer title="雙峰祭2022　自由展" text={false}>
         <Card.Group itemsPerRow={5} doubling stackable>
           {posts.map(({ node }) => {
             return (
