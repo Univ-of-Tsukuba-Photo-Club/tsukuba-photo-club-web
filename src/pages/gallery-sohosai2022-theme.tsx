@@ -43,7 +43,7 @@ const Gallery: React.FC = () => {
     <>
       <Meta title="雙峰祭2022　テーマ展" />
       <PageContainer title="雙峰祭2022　テーマ展" text={false}>
-        <Card.Group itemsPerRow={3} doubling stackable>
+        <Card.Group itemsPerRow={5} doubling stackable>
           {posts.map(({ node }) => {
             return (
               <Card
