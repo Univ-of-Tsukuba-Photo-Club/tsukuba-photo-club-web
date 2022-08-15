@@ -87,12 +87,12 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
               basic
               color='black'
               as={Link}
-              to="/gallery-sohosai2022-free"
+              to={gallerypath}
               style={{
                 margin: "4px",
               }}
             >
-              雙峰祭2022　自由展
+              {galleryname}
             </Button>
           </li>
           <li>
