@@ -12,7 +12,7 @@ const Gallery: React.FC = () => {
       query {
         allMarkdownRemark(
           sort: { fields: [frontmatter___order], order: ASC }
-          filter: { fields: { collection: { eq: "gallery" } } }
+          filter: { fields: { collection: { eq: "gallery-sohosai2022-free" } } }
         ) {
           edges {
             node {
@@ -49,7 +49,7 @@ const Gallery: React.FC = () => {
         <Card.Group itemsPerRow={5} doubling stackable>
           {posts.map(({ node }) => {
             return (
-              <Card
+              <Card css={css({ boxShadow: "none" })}
                 key={node.fields.slug}
                 as={Link}
                 to={node.fields.slug}
