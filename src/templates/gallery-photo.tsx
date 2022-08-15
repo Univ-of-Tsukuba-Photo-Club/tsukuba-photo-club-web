@@ -87,7 +87,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
               basic
               color='black'
               as={Link}
-              to="/gallery"
+              to="/gallery-sohosai2022-free"
               style={{
                 margin: "4px",
               }}
