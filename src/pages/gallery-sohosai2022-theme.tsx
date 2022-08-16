@@ -62,6 +62,17 @@ const Gallery: React.FC = () => {
             )
           })}
         </Card.Group>
+        <Button
+          basic
+          color='grey'
+          as={Link}
+          to="/sohosai2022"
+          style={{
+            margin: "4px",
+          }}
+        >
+          雙峰祭2022
+        </Button>
       </PageContainer>
     </>
   )
