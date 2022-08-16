@@ -11,7 +11,7 @@ const Gallery: React.FC = () => {
     graphql`
       query {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___order], order: ASC }
+          sort: { fields: [frontmatter___date], order: ASC }
           filter: { fields: { collection: { eq: "gallery-sohosai2022-free" } } }
         ) {
           edges {
@@ -23,7 +23,6 @@ const Gallery: React.FC = () => {
               frontmatter {
                 title
                 name
-                order
                 image {
                   childImageSharp {
                     fluid(maxWidth: 400, maxHeight: 400) {
