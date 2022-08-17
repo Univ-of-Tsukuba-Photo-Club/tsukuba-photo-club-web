@@ -23,7 +23,7 @@ const Slideshow: React.FC<Props> = (props) => {
     <>
       {imageUrls.map((url, idx) => (
         <>
-          if (idx === 1 && linkUrl !== "") {
+          { idx === 1 && linkUrl !== "" ? (
             <a href={linkUrl}>
               <img
                 key={url}
@@ -39,7 +39,7 @@ const Slideshow: React.FC<Props> = (props) => {
                 src={url}
               />
             </a>
-          } else {
+          ) : (
             <img
               key={url}
               css={css({
@@ -53,7 +53,7 @@ const Slideshow: React.FC<Props> = (props) => {
               })}
               src={url}
             />
-          }
+          )}
         </>
       ))}
     </>
