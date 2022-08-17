@@ -25,7 +25,7 @@ const Slideshow: React.FC<Props> = (props) => {
         <a
           href={linkUrl}
           css={css({
-            pointerEvents: idx === 1 && linkUrl !== "" ? "none" : "",
+            pointerEvents: linkUrl !== "" && urlIdx === 0 ? "" : "none",
           })}
         >
           <img
