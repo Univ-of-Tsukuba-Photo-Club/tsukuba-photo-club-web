@@ -28,8 +28,10 @@ const IndexPage: React.FC = () => (
       >
         <Slideshow
           imageUrls={[
+            "https://pbs.twimg.com/media/FS89b-oaAAECgwp?format=jpg&name=large",
             "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096"
           ]}
+          linkUrl=""
         />
       </div>
       <Footer />
