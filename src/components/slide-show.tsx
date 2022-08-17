@@ -22,39 +22,21 @@ const Slideshow: React.FC<Props> = (props) => {
   return (
     <>
       {imageUrls.map((url, idx) => (
-        <>
-          { idx === 1 && linkUrl !== "" ? (
-            <a href={linkUrl}>
-              <img
-                key={url}
-                css={css({
-                  width: "100vw",
-                  maxHeight: "90vh",
-                  alignSelf: "center",
-                  objectFit: "contain",
-                  position: "absolute",
-                  opacity: idx === urlIdx ? "1" : "0",
-                  transition: "opacity 1s ease",
-                })}
-                src={url}
-              />
-            </a>
-          ) : (
-            <img
-              key={url}
-              css={css({
-                width: "100vw",
-                maxHeight: "90vh",
-                alignSelf: "center",
-                objectFit: "contain",
-                position: "absolute",
-                opacity: idx === urlIdx ? "1" : "0",
-                transition: "opacity 1s ease",
-              })}
-              src={url}
-            />
-          )}
-        </>
+        <a { idx === 1 && linkUrl !== "" ? {href={linkUrl}} : {tabindex="-1"} } >
+          <img
+            key={url}
+            css={css({
+              width: "100vw",
+              maxHeight: "90vh",
+              alignSelf: "center",
+              objectFit: "contain",
+              position: "absolute",
+              opacity: idx === urlIdx ? "1" : "0",
+              transition: "opacity 1s ease",
+            })}
+            src={url}
+          />
+        </a>
       ))}
     </>
   )
