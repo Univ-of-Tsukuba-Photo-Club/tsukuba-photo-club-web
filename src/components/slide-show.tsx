@@ -6,7 +6,7 @@ type Props = {
 }
 
 const Slideshow: React.FC<Props> = (props) => {
-  const { imageUrls } = props
+  const { imageUrls, linkUrl } = props
 
   const [urlIdx, setUrlIdx] = useState(0)
 
@@ -22,19 +22,37 @@ const Slideshow: React.FC<Props> = (props) => {
   return (
     <>
       {imageUrls.map((url, idx) => (
-        <img
-          key={url}
-          css={css({
-            width: "100vw",
-            maxHeight: "90vh",
-            alignSelf: "center",
-            objectFit: "contain",
-            position: "absolute",
-            opacity: idx === urlIdx ? "1" : "0",
-            transition: "opacity 1s ease",
-          })}
-          src={url}
-        />
+        if (idx === 1 && linkUrl !== "") {
+          <a href={linkUrl}>
+            <img
+              key={url}
+              css={css({
+                width: "100vw",
+                maxHeight: "90vh",
+                alignSelf: "center",
+                objectFit: "contain",
+                position: "absolute",
+                opacity: idx === urlIdx ? "1" : "0",
+                transition: "opacity 1s ease",
+              })}
+              src={url}
+            />
+          </a>
+        } else {
+          <img
+            key={url}
+            css={css({
+              width: "100vw",
+              maxHeight: "90vh",
+              alignSelf: "center",
+              objectFit: "contain",
+              position: "absolute",
+              opacity: idx === urlIdx ? "1" : "0",
+              transition: "opacity 1s ease",
+            })}
+            src={url}
+          />
+        }
       ))}
     </>
   )
