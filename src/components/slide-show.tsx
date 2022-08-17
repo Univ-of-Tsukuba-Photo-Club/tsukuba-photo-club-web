@@ -22,7 +22,12 @@ const Slideshow: React.FC<Props> = (props) => {
   return (
     <>
       {imageUrls.map((url, idx) => (
-        <a { idx === 1 && linkUrl !== "" ? {href={linkUrl}} : {tabindex="-1"} } >
+        <a
+          href={linkUrl}
+          css={css({
+            pointerEvents: idx === 1 && linkUrl !== "" ? "none" : "",
+          })}
+        >
           <img
             key={url}
             css={css({
