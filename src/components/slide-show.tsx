@@ -6,7 +6,7 @@ type Props = {
 }
 
 const Slideshow: React.FC<Props> = (props) => {
-  const { imageUrls, linkUrl, linkUrl2, linkUrl2order } = props
+  const { imageUrls, linkUrl0, linkUrl0order, linkUrl1, linkUrl1order } = props
 
   const [urlIdx, setUrlIdx] = useState(0)
 
@@ -22,10 +22,10 @@ const Slideshow: React.FC<Props> = (props) => {
   return (
     <>
       <a
-        href={ urlIdx === 0 ? linkUrl : urlIdx === linkUrl2order ? linkUrl2 : "" }
+        href={ urlIdx === linkUrl0order ? linkUrl0 : urlIdx === linkUrl1order ? linkUrl1 : "" }
         tabindex={
-          linkUrl !== "" && urlIdx === 0 ? "" :
-          linkUrl2 !== "" && urlIdx === linkUrl2order ? "" : "-1"
+          linkUrl0 !== "" && urlIdx === linkUrl0order ? "" :
+          linkUrl1 !== "" && urlIdx === linkUrl1order ? "" : "-1"
         }
       >
         {imageUrls.map((url, idx) => (
