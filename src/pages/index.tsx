@@ -31,10 +31,7 @@ const IndexPage: React.FC = () => (
             "https://pbs.twimg.com/media/FS89b-oaAAECgwp?format=jpg&name=large",
             "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096"
           ]}
-          linkUrl0="/blogs/2022-06-21-2022年度新人展/"
-          linkUrl0order="0"
-          linkUrl1=""
-          linkUrl1order=""
+          linkUrl="/blogs/2022-06-21-2022年度新人展/"
         />
       </div>
       <Footer />
