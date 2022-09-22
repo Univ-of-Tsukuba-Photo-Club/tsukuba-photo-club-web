@@ -17,7 +17,8 @@ exports.createPages = async ({ graphql, actions }) => {
           edges {
             node {
               fields {
-                slug
+                slug,
+                static
               }
               frontmatter {
                 title
