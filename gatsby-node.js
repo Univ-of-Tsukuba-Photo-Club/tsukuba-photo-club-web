@@ -93,7 +93,7 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     })
-
+  
   pages
     .filter((page) => !isPost(page) && !isPhoto(page))
     .forEach((post) => {
@@ -115,12 +115,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.fileAbsolutePath.includes("content/blog")) {
       slug = `/blogs${slug}`
     }
-    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-free")) {
-      slug = `/gallery-sohosai2022-free${slug}`
+    if (node.fileAbsolutePath.includes("content/gallery/sohosai2022-free")) {
+      slug = `/gallery/sohosai2022-free${slug}`
     }
-    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-theme")) {
+/*    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-theme")) {
       slug = `/gallery-sohosai2022-theme${slug}`
-    }
+    }*/
 
     createNodeField({
       node,
