@@ -1,5 +1,5 @@
 import React from "react"
-import PageContainer from "../components/page-container"
+import PageContainer from "../../components/page-container"
 import Meta from "../../components/meta"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { Card, CardGroup, Header } from "semantic-ui-react"
