@@ -52,9 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
   
-  const isPhoto = (page) => page.node.fields.slug.startsWith("/gallery/")
-  
-  const isSohosai2022Free = (page) => page.node.fields.slug.startsWith("/gallery/sohosai2022-free/")
+  const isSohosai2022Free = (page) => page.node.fields.slug.startsWith("/sohosai2022/free/")
   pages
     .filter((page) => isSohosai2022Free(page))
     .forEach((post, index, posts) => {
@@ -68,13 +66,13 @@ exports.createPages = async ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
-          gallerypath: "/gallery/sohosai2022-free",
+          gallerypath: "/sohosai2022/free",
           galleryname: "雙峰祭2022　自由展",
         },
       })
     })
   
-  const isSohosai2022Theme = (page) => page.node.fields.slug.startsWith("/gallery/sohosai2022-theme/")
+  const isSohosai2022Theme = (page) => page.node.fields.slug.startsWith("/sohosai2022/theme/")
   pages
     .filter((page) => isSohosai2022Theme(page))
     .forEach((post, index, posts) => {
@@ -88,14 +86,15 @@ exports.createPages = async ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
-          gallerypath: "/gallery-sohosai2022-theme",
+          gallerypath: "/sohosai2022/theme",
           galleryname: "雙峰祭2022　テーマ展",
         },
       })
     })
   
+  const isStatic = (page) => page.node.fields.static.startsWith("true")
   pages
-    .filter((page) => !isPost(page) && !isPhoto(page))
+    .filter((page) => isStatic(page))
     .forEach((post) => {
       createPage({
         path: post.node.fields.slug,
@@ -116,16 +115,27 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       slug = `/blogs${slug}`
     }
     if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-free")) {
-      slug = `/gallery/sohosai2022-free${slug}`
+      slug = `/sohosai2022/free${slug}`
     }
     if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-theme")) {
-      slug = `/gallery/sohosai2022-theme${slug}`
+      slug = `/sohosai2022/theme${slug}`
     }
 
     createNodeField({
       node,
       name: "slug",
       value: slug,
+    })
+    
+    let static = "false"
+    if (node.fileAbsolutePath.includes("content/static")) {
+      static = "true"
+    }
+
+    createNodeField({
+      node,
+      name: "static",
+      value: static,
     })
 
     const parent = getNode(node.parent)
