@@ -74,7 +74,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
   /*
-  const isSohosai2022Theme = (page) => page.node.fields.slug.startsWith("/gallery-sohosai2022-theme/")
+  const isSohosai2022Theme = (page) => page.node.fields.slug.startsWith("/gallery/sohosai2022-theme/")
   pages
     .filter((page) => isSohosai2022Theme(page))
     .forEach((post, index, posts) => {
@@ -115,11 +115,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.fileAbsolutePath.includes("content/blog")) {
       slug = `/blogs${slug}`
     }
-    if (node.fileAbsolutePath.includes("content/gallery/sohosai2022-free")) {
+    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-free")) {
       slug = `/gallery/sohosai2022-free${slug}`
     }
 /*    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-theme")) {
-      slug = `/gallery-sohosai2022-theme${slug}`
+      slug = `/gallery/sohosai2022-theme${slug}`
     }*/
 
     createNodeField({
