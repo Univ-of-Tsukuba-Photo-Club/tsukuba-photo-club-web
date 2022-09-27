@@ -36,6 +36,19 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
           `}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        <span
+          css={css`
+            img {
+              max-width: 100%;
+              object-fit: contain;
+            }
+            p {
+              line-height: 32px !important;
+            }
+          `}
+        >
+          {post.frontmatter.image}
+        </span>
         <Header
           as="h3"
           css={css({
