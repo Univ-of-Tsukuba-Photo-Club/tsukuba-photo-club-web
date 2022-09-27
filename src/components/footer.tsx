@@ -6,7 +6,7 @@ const Footer: React.FC = () => (
   <div
     css={css({
       alignSelf: "center",
-      width: "100vw",
+      width: "100%",
       textAlign: "center",
       display: "flex",
       justifyContent: "center",
