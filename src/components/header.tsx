@@ -66,7 +66,7 @@ const Header: React.FC<Props> = (props) => (
             <Menu.Item name="join" as={Link} to="/2022年度新歓" />
             <Menu.Item name="contact" as={Link} to="/contact" />
             <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" />
-/* コメントアウト　静的ページを探し出しリンクを自動生成
+{/* コメントアウト　静的ページを探し出しリンクを自動生成
             {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
               <Menu.Item
                 name={node.frontmatter.title}
@@ -74,7 +74,7 @@ const Header: React.FC<Props> = (props) => (
                 to={node.fields.slug}
               />
             ))}
-*/
+*/}
           </Menu>
         </div>
       </div>
