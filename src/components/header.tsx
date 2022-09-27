@@ -60,8 +60,13 @@ const Header: React.FC<Props> = (props) => (
               }
             `}
           >
-            <Menu.Item name="members" as={Link} to="/members" />
+            <Menu.Item name="about" as={Link} to="/about" />
             <Menu.Item name="blogs" as={Link} to="/blogs" />
+            <Menu.Item name="members" as={Link} to="/members" />
+            <Menu.Item name="join" as={Link} to="/2022年度新歓" />
+            <Menu.Item name="contact" as={Link} to="/contact" />
+            <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" />
+/* コメントアウト　静的ページを探し出しリンクを自動生成
             {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
               <Menu.Item
                 name={node.frontmatter.title}
@@ -69,7 +74,7 @@ const Header: React.FC<Props> = (props) => (
                 to={node.fields.slug}
               />
             ))}
-            <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" />
+*/
           </Menu>
         </div>
       </div>
