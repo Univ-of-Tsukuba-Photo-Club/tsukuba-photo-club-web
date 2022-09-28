@@ -62,30 +62,24 @@ const Gallery: React.FC = () => {
             )
           })}
         </Card.Group>
-        <ul
+        <div
           style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
+            align: "center",
+            margin: "10px",
           }}
         >
-          <li>
-            <Button
-              basic
-              color='black'
-              as={Link}
-              to="/sohosai2022"
-              style={{
-                margin: "4px",
-                align: "center",
-              }}
-            >
-              雙峰祭2022
-            </Button>
-          </li>
-        </ul>
+          <Button
+            basic
+            color='black'
+            as={Link}
+            to="/sohosai2022"
+            style={{
+              margin: "4px",
+            }}
+          >
+            雙峰祭2022
+          </Button>
+        </div>
       </PageContainer>
     </>
   )
