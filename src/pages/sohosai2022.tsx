@@ -5,7 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import { Card, CardGroup, Header } from "semantic-ui-react"
 import css from "@emotion/css"
 
-const Blogs: React.FC = () => {
+const Sohosai2022: React.FC = () => {
   return (
     <>
       <Meta title="Sohosai2022" />
@@ -48,4 +48,4 @@ const Blogs: React.FC = () => {
   )
 }
 
-export default Blogs
+export default Sohosai2022
