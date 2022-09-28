@@ -70,18 +70,29 @@ const Gallery: React.FC = () => {
             )
           })}
         </Card.Group>
-        <Button
-          basic
-          color='black'
-          as={Link}
-          to="/sohosai2022"
+        <ul
           style={{
-            margin: "4px",
-            align: "center",
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `center`,
+            listStyle: `none`,
+            padding: 0,
           }}
         >
-          雙峰祭2022
-        </Button>
+          <li>
+            <Button
+              basic
+              color='black'
+              as={Link}
+              to="/sohosai2022"
+              style={{
+                margin: "4px",
+              }}
+            >
+              雙峰祭2022
+            </Button>
+          </li>
+        </ul>
       </PageContainer>
     </>
   )
