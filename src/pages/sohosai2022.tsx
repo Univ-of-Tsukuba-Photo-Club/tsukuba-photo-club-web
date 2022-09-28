@@ -2,7 +2,7 @@ import React from "react"
 import PageContainer from "../components/page-container"
 import Meta from "../components/meta"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { Card, CardGroup, Header } from "semantic-ui-react"
+import { Button, Card, CardGroup, Header } from "semantic-ui-react"
 import css from "@emotion/css"
 
 const Sohosai2022: React.FC = () => {
@@ -38,7 +38,6 @@ const Sohosai2022: React.FC = () => {
           to="https://sohosai.com"
           style={{
             margin: "4px",
-            align: "center",
           }}
         >
           雙峰祭トップページ
