@@ -16,20 +16,18 @@ const Sohosai2022: React.FC = () => (
       <Card.Group>
         <Card
           fluid
-          color='black'
           header='自由展'
           as={Link}
           to="/sohosai2022/free"
         />
         <Card
           fluid
-          color='black'
           header='テーマ展「輝き」'
           as={Link}
           to="/sohosai2022/theme"
         />
       </Card.Group>
-      <br/>
+      <hr css={css({ marginTop: "24px" })} />
       <h2>
         対面企画のご案内
       </h2>
@@ -37,18 +35,29 @@ const Sohosai2022: React.FC = () => (
         1E502・503教室において、写真やフォトブックの展示を行っています。ぜひお越しください。<br/>
         なお、ご来場には制限がございます。詳しくは<a href="https://sohosai.com">雙峰祭公式サイト</a>をご覧ください。
       </p>
-      <Button
-        basic
-        color='black'
-        as={Link}
-        to="https://sohosai.com"
+      <ul
         style={{
-          margin: "4px",
-          align: "center",
+          display: `flex`,
+          flexWrap: `wrap`,
+          justifyContent: `center`,
+          listStyle: `none`,
+          padding: 0,
         }}
       >
-        雙峰祭トップページ
-      </Button>
+        <li>
+          <Button
+            basic
+            color='black'
+            as={Link}
+            to="https://sohosai.com"
+            style={{
+              margin: "4px",
+            }}
+          >
+            雙峰祭トップページ
+          </Button>
+        </li>
+      </ul>
     </PageContainer>
   </>
 )
