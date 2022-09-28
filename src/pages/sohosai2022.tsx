@@ -9,7 +9,7 @@ const Sohosai2022: React.FC = () => {
   return (
     <>
       <Meta title="Sohosai2022" />
-      <PageContainer title="雙峰祭2022">
+      <PageContainer title="雙峰祭2022" text={false}>
         <p>
           雙峰祭「筑波大学写真部展示会」のオンライン企画ページです。
         </p>
