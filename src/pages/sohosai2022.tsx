@@ -7,7 +7,7 @@ import css from "@emotion/css"
 
 const Sohosai2022: React.FC = () => (
   <>
-    <Meta title="Sohosai2022" />
+    <Meta title="雙峰祭2022" />
     <PageContainer title="雙峰祭2022">
       <p>
         筑波大学写真部による雙峰祭企画「筑波大学写真部展示会」のオンラインページです。<br/>
