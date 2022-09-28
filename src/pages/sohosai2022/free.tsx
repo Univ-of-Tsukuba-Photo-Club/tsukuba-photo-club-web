@@ -2,7 +2,7 @@ import React from "react"
 import PageContainer from "../../components/page-container"
 import Meta from "../../components/meta"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { Card, CardGroup, Header } from "semantic-ui-react"
+import { Button, Card, CardGroup, Header } from "semantic-ui-react"
 import css from "@emotion/css"
 import Img from "gatsby-image"
 
@@ -70,6 +70,18 @@ const Gallery: React.FC = () => {
             )
           })}
         </Card.Group>
+        <Button
+          basic
+          color='black'
+          as={Link}
+          to="/sohosai2022"
+          style={{
+            margin: "4px",
+            align: "center",
+          }}
+        >
+          雙峰祭2022
+        </Button>
       </PageContainer>
     </>
   )
