@@ -18,7 +18,7 @@ const Header: React.FC<Props> = (props) => (
             ? "rgba(255, 255, 255, 0.85)"
             : "rgba(238, 238, 238, 0.25)",
           position: props.fixed ? "fixed" : undefined,
-          width: 100%,
+          width: "100%",
           zIndex: 1,
           boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
         })}
