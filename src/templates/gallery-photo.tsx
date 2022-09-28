@@ -35,15 +35,15 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
           `}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <Header
-          as="h3"
+        <p
           css={css({
-            fontFamily: "sans-serif !important;",
+            fontSize: "larger",
+            fontWeight: "bold",
             textAlign: "center"
           })}
         >
           {post.frontmatter.title}
-        </Header>
+        </p>
         <p
           css={css({
             color: "grey",
