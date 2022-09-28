@@ -11,7 +11,7 @@ const Gallery: React.FC = () => {
     graphql`
       query {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___order], order: ASC }
+          sort: { fields: [frontmatter___date], order: ASC }
           filter: { fields: { collection: { eq: "gallery-sohosai2022-theme" } } }
         ) {
           edges {
