@@ -70,7 +70,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
           }}
         >
           <li>
-            {previous && (
+            {previous & (
               <Button
                 basic
                 color='black'
@@ -79,6 +79,18 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 to={previous.fields.slug}
                 style={{
                   margin: "4px",
+                }}
+              >
+                <Icon name="arrow left" />
+              </Button>
+            ) : (
+              <Button
+                basic
+                color='black'
+                icon
+                style={{
+                  margin: "4px",
+                  visibility: "hidden",
                 }}
               >
                 <Icon name="arrow left" />
@@ -99,7 +111,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             </Button>
           </li>
           <li>
-            {next && (
+            {next & (
               <Button
                 basic
                 color='black'
@@ -108,6 +120,18 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
                 to={next.fields.slug}
                 style={{
                   margin: "4px",
+                }}
+              >
+                <Icon name="arrow right" />
+              </Button>
+            ) : (
+              <Button
+                basic
+                color='black'
+                icon
+                style={{
+                  margin: "4px",
+                  visibility: "hidden",
                 }}
               >
                 <Icon name="arrow right" />
