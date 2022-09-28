@@ -70,7 +70,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
           }}
         >
           <li>
-            {previous & (
+            {previous ? (
               <Button
                 basic
                 color='black'
@@ -110,7 +110,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             </Button>
           </li>
           <li>
-            {next & (
+            {next ? (
               <Button
                 basic
                 color='black'
