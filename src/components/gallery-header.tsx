@@ -17,7 +17,7 @@ const GalleryHeader: React.FC<Props> = (props) => (
             ? "rgba(255, 255, 255, 0.85)"
             : "rgba(238, 238, 238, 0.25)",
           position: props.fixed ? "fixed" : undefined,
-          width: "100vw",
+          width: "100%",
           zIndex: 1,
           boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
         })}
@@ -51,7 +51,7 @@ const query = graphql`
   query {
     file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        fixed(width: 250, height: 80) {
+        fixed(width: 300, height: 80) {
           ...GatsbyImageSharpFixed_noBase64
         }
       }
