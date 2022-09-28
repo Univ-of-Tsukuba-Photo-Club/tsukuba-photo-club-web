@@ -86,11 +86,10 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             ) : (
               <Button
                 basic
-                color='black'
+                color='white'
                 icon
                 style={{
                   margin: "4px",
-                  visibility: "hidden",
                 }}
               >
                 <Icon name="arrow left" />
@@ -127,11 +126,10 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
             ) : (
               <Button
                 basic
-                color='black'
+                color='white'
                 icon
                 style={{
                   margin: "4px",
-                  visibility: "hidden",
                 }}
               >
                 <Icon name="arrow right" />
