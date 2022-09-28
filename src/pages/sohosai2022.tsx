@@ -9,11 +9,11 @@ const Sohosai2022: React.FC = () => {
   return (
     <>
       <Meta title="Sohosai2022" />
-      <PageContainer title="雙峰祭2022" text={false}>
-        <p>
+      <PageContainer title="雙峰祭2022">
+/*        <p>
           雙峰祭「筑波大学写真部展示会」のオンライン企画ページです。
-        </p>
-/*        <Card.Group>
+        </p>*/
+        <Card.Group>
           <Card
             fluid
             header='自由展'
@@ -26,12 +26,12 @@ const Sohosai2022: React.FC = () => {
             as={Link}
             to="/sohosai2022/theme"
           />
-        </Card.Group>*/
-        <p>
+        </Card.Group>
+/*        <p>
           対面企画として、1E502・503教室においても写真やフォトブックの展示を行っています。ぜひお越しください。<br>
           なお、ご来場には制限があります。詳しくは<a href="https://sohosai.com">雙峰祭公式サイト</a>をご覧ください。
         </p>
-/*        <Button
+        <Button
           basic
           color='black'
           as={Link}
