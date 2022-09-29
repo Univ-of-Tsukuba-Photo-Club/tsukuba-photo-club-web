@@ -23,23 +23,19 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         image={post.frontmatter.image?.publicURL}
       />
       <PhotoContainer>
-        <span
+        <Img
+          fluid={node.frontmatter.image.childImageSharp.fluid}
           css={css`
-            img {
-              max-width: 100%;
-              object-fit: contain;
-            }
-            p {
-              line-height: 32px !important;
-            }
+            max-width: 100%;
+            object-fit: contain;
           `}
-          dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <p
           css={css({
             fontSize: "larger",
             fontWeight: "bold",
-            textAlign: "center"
+            textAlign: "center",
+            marginTop: "24px",
           })}
         >
           {post.frontmatter.title}
@@ -47,7 +43,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
         <p
           css={css({
             color: "grey",
-            textAlign: "center"
+            textAlign: "center",
           })}
         >
           {post.frontmatter.name}
@@ -163,6 +159,11 @@ export const pageQuery = graphql`
         description
         image {
           publicURL
+          childImageSharp {
+            fluid(maxWidth: 1500, maxHeight: 1500) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
         }
       }
     }
