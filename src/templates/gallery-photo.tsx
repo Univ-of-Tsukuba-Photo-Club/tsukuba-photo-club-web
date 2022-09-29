@@ -25,7 +25,7 @@ const GalleryPhotoTemplate: React.FC<Props> = (props) => {
       />
       <PhotoContainer>
         <Img
-          fluid={node.frontmatter.image.childImageSharp.fluid}
+          fluid={post.frontmatter.image.childImageSharp.fluid}
           css={css`
             max-width: 100%;
             object-fit: contain;
