@@ -4,6 +4,7 @@ import Meta from "../components/meta"
 import { graphql, Link } from "gatsby"
 import css from "@emotion/css"
 import { Button, Header, Icon } from "semantic-ui-react"
+import Img from "gatsby-image"
 
 type Props = {
   data: any
