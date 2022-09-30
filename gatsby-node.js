@@ -53,6 +53,46 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
 
+  const isSohosai2022Free = (page) => page.node.fields.slug.startsWith("/sohosai2022/free/")
+  pages
+    .filter((page) => isSohosai2022Free(page))
+    .forEach((post, index, posts) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
+      createPage({
+        path: post.node.fields.slug,
+        component: galleryPhoto,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+          gallerypath: "/sohosai2022/free",
+          galleryname: "雙峰祭2022　自由展",
+        },
+      })
+    })
+
+  const isSohosai2022Theme = (page) => page.node.fields.slug.startsWith("/sohosai2022/theme/")
+  pages
+    .filter((page) => isSohosai2022Theme(page))
+    .forEach((post, index, posts) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
+      createPage({
+        path: post.node.fields.slug,
+        component: galleryPhoto,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+          gallerypath: "/sohosai2022/theme",
+          galleryname: "雙峰祭2022　テーマ展",
+        },
+      })
+    })
+
   const isStatic = (page) => page.node.fields.static.startsWith("true")
   pages
     .filter((page) => isStatic(page))
@@ -74,6 +114,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     let slug = createFilePath({ node, getNode })
     if (node.fileAbsolutePath.includes("content/blog")) {
       slug = `/blogs${slug}`
+    }
+    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-free")) {
+      slug = `/sohosai2022/free${slug}`
+    }
+    if (node.fileAbsolutePath.includes("content/gallery-sohosai2022-theme")) {
+      slug = `/sohosai2022/theme${slug}`
     }
 
     createNodeField({
