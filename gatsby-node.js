@@ -16,7 +16,8 @@ exports.createPages = async ({ graphql, actions }) => {
           edges {
             node {
               fields {
-                slug
+                slug,
+                static
               }
               frontmatter {
                 title
@@ -51,8 +52,9 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
 
+  const isStatic = (page) => page.node.fields.static.startsWith("true")
   pages
-    .filter((page) => !isPost(page))
+    .filter((page) => isStatic(page))
     .forEach((post) => {
       createPage({
         path: post.node.fields.slug,
@@ -77,6 +79,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       name: "slug",
       value: slug,
+    })
+    
+    let static = "false"
+    if (node.fileAbsolutePath.includes("content/static")) {
+      static = "true"
+    }
+
+    createNodeField({
+      node,
+      name: "static",
+      value: static,
     })
 
     const parent = getNode(node.parent)
