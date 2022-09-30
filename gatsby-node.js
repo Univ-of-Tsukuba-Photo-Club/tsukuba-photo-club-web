@@ -138,17 +138,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: "static",
       value: static,
     })
-
-    let static = "false"
-    if (node.fileAbsolutePath.includes("content/static")) {
-      static = "true"
-    }
-
-    createNodeField({
-      node,
-      name: "static",
-      value: static,
-    })
     
     const parent = getNode(node.parent)
 
