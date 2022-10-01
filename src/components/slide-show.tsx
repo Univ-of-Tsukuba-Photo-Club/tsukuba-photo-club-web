@@ -30,7 +30,8 @@ const Slideshow: React.FC<Props> = (props) => {
         <img
           key={url}
           css={css({
-            display: "inline-block",
+            width: "100%",
+            height: "100%",
             objectFit: "cover",
             position: "absolute",
             opacity: idx === urlIdx ? "1" : "0",
