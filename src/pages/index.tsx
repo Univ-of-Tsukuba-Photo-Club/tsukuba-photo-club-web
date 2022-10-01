@@ -21,8 +21,7 @@ const IndexPage: React.FC = () => (
       <Header />
       <div
         css={css({
-          maxWidth: "100%",
-          maxHeight: "90vh",
+          height: "fit-content",
         })}
       >
         <Slideshow
@@ -33,6 +32,12 @@ const IndexPage: React.FC = () => (
           ]}
           linkUrl="/blogs/2022-06-21-2022年度新人展/"
         />
+      </div>
+      <div
+        css={css({
+          flex: "1 0 auto",
+        })}
+      >
       </div>
       <Footer />
     </div>
