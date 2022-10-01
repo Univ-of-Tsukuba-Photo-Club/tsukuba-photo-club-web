@@ -21,7 +21,8 @@ const IndexPage: React.FC = () => (
       <Header />
       <div
         css={css({
-          height: "fit-content",
+          height: "67vw",
+          maxHeight: "90vh",
         })}
       >
         <Slideshow
