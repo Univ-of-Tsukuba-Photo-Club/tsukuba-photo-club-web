@@ -23,6 +23,9 @@ const Slideshow: React.FC<Props> = (props) => {
     <a          
       href={linkUrl}
       css={css({
+        width: "100%",
+        height: "100%",
+        position: "absolute",
         pointerEvents: linkUrl !== "" && urlIdx === 0 ? "" : "none",
       })}
     >
