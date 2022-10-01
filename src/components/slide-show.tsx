@@ -23,6 +23,7 @@ const Slideshow: React.FC<Props> = (props) => {
     <a          
       href={linkUrl}
       css={css({
+        display: "inline-block",
         width: "100%",
         height: "100%",
         position: "absolute",
@@ -33,6 +34,7 @@ const Slideshow: React.FC<Props> = (props) => {
         <img
           key={url}
           css={css({
+            display: "inline-block",
             width: "100%",
             height: "100%",
             objectFit: "cover",
