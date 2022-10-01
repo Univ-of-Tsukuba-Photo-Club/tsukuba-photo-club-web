@@ -23,10 +23,6 @@ const Slideshow: React.FC<Props> = (props) => {
     <a          
       href={linkUrl}
       css={css({
-        display: "inline-block",
-        width: "100%",
-        height: "100%",
-        position: "absolute",
         pointerEvents: linkUrl !== "" && urlIdx === 0 ? "" : "none",
       })}
     >
@@ -34,10 +30,10 @@ const Slideshow: React.FC<Props> = (props) => {
         <img
           key={url}
           css={css({
-            display: "inline-block",
             width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            maxHeight: "90vh",
+            alignSelf: "center",
+            objectFit: "contain",
             position: "absolute",
             opacity: idx === urlIdx ? "1" : "0",
             transition: "opacity 1s ease",
