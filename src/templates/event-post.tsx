@@ -30,6 +30,7 @@ const EventPostTemplate: React.FC<Props> = (props) => {
           })}
         >
           {post.frontmatter.title}
+        </Header>
         <span
           css={css`
             img {
