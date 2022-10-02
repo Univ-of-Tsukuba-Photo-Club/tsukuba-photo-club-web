@@ -28,13 +28,17 @@ const IndexPage: React.FC = () => (
       >
         <Slideshow
           imageUrls={[
-            "/blackboard.jpg",
-            "https://pbs.twimg.com/media/FS89b-oaAAECgwp?format=jpg&name=large",
-            "https://pbs.twimg.com/media/DN3xyoOUIAEb0sE?format=jpg&name=4096x4096",
-            "https://raw.githubusercontent.com/Univ-of-Tsukuba-Photo-Club/tsukuba-photo-club-web/master/content/img/%E3%80%8C%E8%A6%8B%E3%82%8B%E3%80%8D%E5%86%99%E7%9C%9F%E3%81%8B%E3%82%89%E3%80%8C%E8%AA%AD%E3%82%80%E3%80%8D%E5%86%99%E7%9C%9F%E3%81%B8-1-.jpg"
+            "/slideshow-blackboard.jpg",
+            "/slideshow-exhibits.jpg",
+            "/slideshow-photobooks.jpg",
+            "/slideshow-groupphoto.jpg"
           ]}
-          linkUrl="/blogs/2022-06-21-2022年度新人展/"
+          linkUrl=""
         />
+{/*
+imageUrls：スライドショーの写真　スライドショー用のみ直下の/staticに保存のこと
+linkUrl：URL（/aboutなどでもよい（というかむしろ推奨））を入れると1枚目の時にスライドショーがそこへのリンクに変わる　イベント告知などでの使用を想定
+*/}
       </div>
       <Footer />
     </div>
