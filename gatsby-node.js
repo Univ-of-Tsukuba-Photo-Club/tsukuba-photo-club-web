@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
+  const eventPost = path.resolve(`./src/templates/event-post.tsx`)
   const galleryPhoto = path.resolve(`./src/templates/gallery-photo.tsx`)
   const staticPage = path.resolve(`./src/templates/static-page.tsx`)
   const result = await graphql(
@@ -35,7 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const pages = result.data.allMarkdownRemark.edges
-  const isPost = (page) => page.node.fields.slug.startsWith(("/blogs/", "/events/"))
+  const isPost = (page) => page.node.fields.slug.startsWith("/blogs/")
   pages
     .filter((page) => isPost(page))
     .forEach((post, index, posts) => {
@@ -45,6 +46,24 @@ exports.createPages = async ({ graphql, actions }) => {
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+  
+  const isEventPost = (page) => page.node.fields.slug.startsWith("/events/")
+  pages
+    .filter((page) => isEventPost(page))
+    .forEach((post, index, posts) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
+      createPage({
+        path: post.node.fields.slug,
+        component: eventPost,
         context: {
           slug: post.node.fields.slug,
           previous,
