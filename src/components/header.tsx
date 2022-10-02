@@ -44,7 +44,7 @@ const Header: React.FC<Props> = (props) => (
               }
             `}
           >
-            <Img fixed={data.file.childImageSharp.fixed} />
+            <Img fixed={data.file.childImageSharp.fixed} loading="eager" fadeIn={false} />
           </Link>
           <Menu
             text
