@@ -21,6 +21,17 @@ collections:
       - { label: "画像", name: "image", widget: "image", required: false }
       - { label: "説明", name: "description", widget: "string" }
       - { label: "本文", name: "body", widget: "markdown" }
+  - name: "event"
+    label: "イベント"
+    folder: "content/event"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "投稿日", name: "date", widget: "datetime" }
+      - { label: "画像", name: "image", widget: "image", required: false }
+      - { label: "説明", name: "description", widget: "string" }
+      - { label: "本文", name: "body", widget: "markdown" }
   - name: "static"
     label: "静的ページ"
     folder: "content/static"

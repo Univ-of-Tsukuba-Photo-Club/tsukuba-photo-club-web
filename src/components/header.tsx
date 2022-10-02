@@ -61,6 +61,7 @@ const Header: React.FC<Props> = (props) => (
             `}
           >
             <Menu.Item name="about" as={Link} to="/about" />
+            <Menu.Item name="events" as={Link} to="/events" />
             <Menu.Item name="blogs" as={Link} to="/blogs" />
             <Menu.Item name="members" as={Link} to="/members" />
             <Menu.Item name="join" as={Link} to="/2022年度新歓" />
