@@ -19,6 +19,9 @@ const IndexPage: React.FC = () => (
       })}
     >
       <Header />
+{/*
+2022年10月の更新までheaderで引数fixedを使用
+*/}
       <div
         css={css({
           height: "67vw",
@@ -36,8 +39,8 @@ const IndexPage: React.FC = () => (
           linkUrl=""
         />
 {/*
-imageUrls：スライドショーの写真　スライドショー用のみ直下の/staticに保存のこと
-linkUrl：URL（/aboutなどでもよい（というかむしろ推奨））を入れると1枚目の時にスライドショーがそこへのリンクに変わる　イベント告知などでの使用を想定
+imageUrls：スライドショーの写真　アスペクト比3:2限定・レポジトリ直下の/staticに保存
+linkUrl：URL（/aboutなどでよい）を入れると1枚目の時にスライドショーがそこへのリンクに変わる　イベント告知などでの使用を想定
 */}
       </div>
       <Footer />
