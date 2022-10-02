@@ -18,7 +18,7 @@ const Header: React.FC<Props> = (props) => (
             ? "rgba(255, 255, 255, 0.85)"
             : "rgba(238, 238, 238, 0.25)",
           position: props.fixed ? "fixed" : undefined,
-          width: "100vw",
+          width: "100%",
           zIndex: 1,
           boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
         })}
@@ -60,8 +60,14 @@ const Header: React.FC<Props> = (props) => (
               }
             `}
           >
-            <Menu.Item name="members" as={Link} to="/members" />
+            <Menu.Item name="about" as={Link} to="/about" />
             <Menu.Item name="blogs" as={Link} to="/blogs" />
+            <Menu.Item name="members" as={Link} to="/members" />
+            <Menu.Item name="join" as={Link} to="/2022年度新歓" />
+            <Menu.Item name="contact" as={Link} to="/contact" />
+            <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" rel="noopener noreferrer" />
+{/*
+コメントアウト　静的ページを探し出しリンクを生成する機能
             {(data.allMarkdownRemark.edges as any[]).map(({ node }) => (
               <Menu.Item
                 name={node.frontmatter.title}
@@ -69,7 +75,7 @@ const Header: React.FC<Props> = (props) => (
                 to={node.fields.slug}
               />
             ))}
-            <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" />
+*/}
           </Menu>
         </div>
       </div>
