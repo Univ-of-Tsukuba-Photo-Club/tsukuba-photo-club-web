@@ -49,14 +49,6 @@ const Events: React.FC = () => {
               >
                 <Card.Content>
                   <Header as="h2">{node.frontmatter.title}</Header>
-                  <div
-                    css={css({
-                      fontSize: "14px",
-                      color: "grey",
-                    })}
-                  >
-                    {node.frontmatter.date}
-                  </div>
                   <p
                     css={css({ marginTop: "16px !important", color: "black" })}
                     dangerouslySetInnerHTML={{
