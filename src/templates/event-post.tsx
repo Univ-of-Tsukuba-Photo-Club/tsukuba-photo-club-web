@@ -11,7 +11,7 @@ type Props = {
   location: any
 }
 
-const BlogPostTemplate: React.FC<Props> = (props) => {
+const EventPostTemplate: React.FC<Props> = (props) => {
   const post = props.data.markdownRemark
   const { previous, next } = props.pageContext
 
@@ -30,6 +30,7 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
           })}
         >
           {post.frontmatter.title}
+        </Header>
         <span
           css={css`
             img {
@@ -90,10 +91,10 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
   )
 }
 
-export default BlogPostTemplate
+export default EventPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query EventPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title
