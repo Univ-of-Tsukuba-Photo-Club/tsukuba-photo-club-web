@@ -40,7 +40,7 @@ const Sohosai2022: React.FC = () => (
       </h2>
       <p>
         1E502・503教室において、写真やフォトブックの展示を行っています。ぜひお越しください。<br/>
-        なお、ご来場には制限がございます。詳しくは<a href="https://sohosai.com">雙峰祭公式サイト</a>をご覧ください。
+        なお、ご来場には事前予約が必要です。詳しくは<a href="https://sohosai.com/prebooking" target="_blank">雙峰祭公式サイト</a>をご覧ください。
       </p>
       <ul
         style={{
@@ -57,6 +57,7 @@ const Sohosai2022: React.FC = () => (
             color='black'
             as={Link}
             to="https://sohosai.com"
+            target="_blank"
             style={{
               margin: "4px",
             }}
