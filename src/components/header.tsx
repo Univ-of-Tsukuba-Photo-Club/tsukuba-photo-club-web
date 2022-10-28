@@ -64,6 +64,7 @@ const Header: React.FC<Props> = (props) => (
             <Menu.Item name="blogs" as={Link} to="/blogs" />
             <Menu.Item name="members" as={Link} to="/members" />
             <Menu.Item name="join" as={Link} to="/join" />
+            <Menu.Item name="contact" as={Link} to="/contact" />
             <Menu.Item name="twitter" as={Link} to="https://twitter.com/tsukuba_photo" target="blank" rel="noopener noreferrer" />
 {/*
 コメントアウト　静的ページを探し出しリンクを生成する機能
