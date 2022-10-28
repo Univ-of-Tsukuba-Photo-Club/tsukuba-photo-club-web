@@ -11,7 +11,7 @@ title: Join
 写真部の活動内容については[公式ツイッター](https://twitter.com/tsukuba_photo)も併せてご覧ください。\
 また、わからないことがありましたら、ツイッターに掲載している質問箱やメールを使って、お気軽にお問い合わせください。
 
-<hr />
+<br />
 
 The Tsukuba Photo Club is open to new members throughout the year.
 
