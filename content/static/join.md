@@ -11,6 +11,10 @@ title: Join
 写真部の活動内容については[公式ツイッター](https://twitter.com/tsukuba_photo)も併せてご覧ください。\
 また、わからないことがありましたら、ツイッターに掲載している質問箱やメールを使って、お気軽にお問い合わせください。
 
-The Tsukuba Photo Club is open to new members throughout the year.\
-We welcome visitors to our weekly meetings from 18:30 every Friday.\
+<hr />
+
+The Tsukuba Photo Club is open to new members throughout the year.
+
+We welcome visitors to our weekly meetings from 18:30 every Friday.
+
 If you are interested, please contact us at tsukuba.photoclub[at]gmail.com (change "[at]" for "@"), using your university e-mail address ("s-address").
