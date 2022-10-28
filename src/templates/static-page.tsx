@@ -2,7 +2,6 @@ import React from "react"
 import PageContainer from "../components/page-container"
 import Meta from "../components/meta"
 import { graphql } from "gatsby"
-import ShareButtons from "../components/share-buttons"
 
 type Props = {
   data: any
@@ -19,7 +18,6 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
         description={post.frontmatter.description}
       />
       <PageContainer title={post.frontmatter.title}>
-        <ShareButtons href={props.location.href} />
         <span dangerouslySetInnerHTML={{ __html: post.html }} />
       </PageContainer>
     </>
