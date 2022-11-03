@@ -8,6 +8,8 @@ title: About
 週に一度のミーティング、月に一回程度の撮影会や講評会、そして年に数回の写真展を中心に活動しています。
 
 <br />
+<hr />
+<br />
 
 The Tsukuba Photo Club (筑波大学写真部) is a photography club at the University of Tsukuba.
 
