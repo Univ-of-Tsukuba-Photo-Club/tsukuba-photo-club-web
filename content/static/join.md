@@ -12,6 +12,8 @@ title: Join
 また、わからないことがありましたら、ツイッターに掲載している質問箱やメールを使って、お気軽にお問い合わせください。
 
 <br />
+<hr />
+<br />
 
 The Tsukuba Photo Club is open to new members throughout the year.
 
