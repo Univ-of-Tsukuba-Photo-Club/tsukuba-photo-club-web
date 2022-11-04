@@ -26,7 +26,7 @@ const GalleryHeaderMiddle: React.FC<Props> = (props) => (
             margin-left: 0;
           `}
         >
-          <Img fixed={data.file.childImageSharp.fixed} loading="eager" />
+          <Img fixed={data.file.childImageSharp.fixed} loading="eager" fadeIn={false} />
         </Link>
       </div>
     )}

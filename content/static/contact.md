@@ -1,6 +1,8 @@
 ---
 title: Contact
 ---
-入部希望、撮影依頼、その他ご用件がありましたら以下のアドレス宛にメールをお送り下さい。\
-tsukuba.photoclub\[at]gmail.com\
-(\[at]を@に変えてください。)
+E-mail：tsukuba.photoclub\[at]gmail.com　（\[at]を@に変えてください。）
+
+Twitter：[@tsukuba_photo](https://twitter.com/tsukuba_photo)
+
+Instagram：[@tsukuba.photoclub](https://www.instagram.com/tsukuba.photoclub)
