@@ -4,7 +4,6 @@ import Meta from "../components/meta"
 import { graphql, Link } from "gatsby"
 import css from "@emotion/css"
 import { Button, Header, Icon } from "semantic-ui-react"
-import ShareButtons from "../components/share-buttons"
 
 type Props = {
   data: any
@@ -40,7 +39,6 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
         >
           {post.frontmatter.date}
         </div>
-        <ShareButtons href={props.location.href} />
         <span
           css={css`
             img {
