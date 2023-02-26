@@ -62,7 +62,7 @@ const Members: React.FC = () => {
       <Meta title="Members" />
       <PageContainer title="Members" text={false}>
         <p css={css({ textAlign: "center", paddingBottom: "12px" })}>
-          現在、追加中です。
+          希望者のみ掲載しています。
         </p>
         <Card.Group itemsPerRow={5} doubling stackable>
           {members.map(({ node }) => {
