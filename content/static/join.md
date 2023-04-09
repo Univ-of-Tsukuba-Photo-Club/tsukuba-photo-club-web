@@ -51,7 +51,7 @@ title: Join
 
 ### 参加申込
 
-tsukubaphotoclub[at]gmail.com（[at]を@に変えてください）宛に
+tsukuba.photoclub[at]gmail.com（[at]を@に変えてください）宛に
 
 * 名前
 * 学籍番号
