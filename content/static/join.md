@@ -12,7 +12,7 @@ title: Join
 
 ### 平日夕方のイベント
 
-18:30～20:00　第一エリア　要申込
+18:30～20:00　1C104（暗室）集合
 
 #### 鑑賞会
 
@@ -20,20 +20,23 @@ title: Join
 
 お互いが撮った写真を見てコメントします。持ち込み歓迎！
 
+写真の提出は次のフォームからどうぞ：[4/21(金)](https://forms.gle/5fAw8Gxnv9DAwXMA8)・[4/26(水)](https://forms.gle/HwECcWKyQ3iZEGHc9)・[5/9(水)](https://forms.gle/dHZ1WppTfCaR83zp9)
+
 #### デジタルカメラ体験会
 
 * 4/17(月)・4/28(金)
 
-あなたもデジタルカメラに触ってみませんか？カメラ貸出あり！
+あなたもデジタルカメラに触ってみませんか？カメラ貸出（[申込はこちら](https://forms.gle/ZTfhPLiWG6naEZGq7)）あり！
 
 #### 座談会
+
 * 5/1(月)
 
 疑問や相談にお答えします！部員とおしゃべりしたい方はぜひお越しください！
 
 ### 休日午後のイベント
 
-14:00～16:00　現地集合　要申込
+14:00～16:00　現地集合
 
 #### 散策会
 
@@ -41,7 +44,7 @@ title: Join
 * 4/23(日)：つくばセンター周辺
 * 4/29(土)：筑波実験植物園
 
-学内や周辺をカメラを持って散策します。カメラ貸出あり！
+学内や周辺をカメラを持って散策します。カメラ貸出（[申込はこちら](https://forms.gle/ZTfhPLiWG6naEZGq7)）あり！
 
 ### その他のイベント
 
@@ -49,22 +52,10 @@ title: Join
 
 また、新歓と並行して、4月5日（水）から5月31日（水）まで体芸図書館Eureka!で「春の展示会」を開催しています。こちらもぜひご覧ください。
 
-### 参加申込
-
-tsukuba.photoclub[at]gmail.com（[at]を@に変えてください）宛に
-
-* 名前
-* 学籍番号
-* 所属（学類等）
-* 希望する日程
-* カメラ貸出の有無（体験会・散策会のみ）
-
-を添えてご連絡ください。
-
 <br />
 <hr />
 <br />
 
 The Tsukuba Photo Club is holding events for prospective members in April and early May as shown above.
 
-If you are interested, please email us at tsukuba.photoclub[at]gmail.com (change "[at]" for "@"), with your name, student number, faculty, the event you wish to participate, and whether you wish to borrow a camera (for 体験会 and 散策会 only).
+We look forward to seeing you.
