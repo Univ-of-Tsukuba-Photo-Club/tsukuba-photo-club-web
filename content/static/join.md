@@ -1,63 +1,26 @@
 ---
 title: Join
 ---
+筑波大学写真部では、一年を通じて入部を歓迎します。
 
-## 2023年度新歓イベント
+毎週金曜日の18:30から行っているミーティングにて、随時見学を受け付けています。
 
-筑波大学写真部では、4月から5月初頭にかけて新歓イベントを開催します。1年生はもちろん、2年生以上や院生の方の参加も大歓迎です。
+写真部の活動内容については[公式ツイッター](https://twitter.com/tsukuba_photo)も併せてご覧ください。
 
-最新の情報については[公式Twitter](https://twitter.com/tsukuba_photo)などで発信しています。あわせてご覧ください。
+また、わからないことがありましたら、メール（tsukuba.photoclub[at]gmail.com　[at]を@に変えてください）や[質問箱](https://peing.net/ja/tsukuba_photo)にてお気軽にお問い合わせください。
 
-![](/img/写真部新歓カレンダー2023.png)
-
-### 平日夕方のイベント
-
-18:30～20:00　1C104（暗室）集合
-
-#### 鑑賞会
-
-* 4/14(金)・4/21(金)・4/26(水)・5/9(水)
-
-お互いが撮った写真を見てコメントします。持ち込み歓迎！
-
-写真の提出は次のフォームからどうぞ：[4/21(金)](https://forms.gle/5fAw8Gxnv9DAwXMA8)・[4/26(水)](https://forms.gle/HwECcWKyQ3iZEGHc9)・[5/9(水)](https://forms.gle/dHZ1WppTfCaR83zp9)
-
-#### デジタルカメラ体験会
-
-* 4/17(月)・4/28(金)
-
-あなたもデジタルカメラに触ってみませんか？カメラ貸出（[申込はこちら](https://forms.gle/ZTfhPLiWG6naEZGq7)）あり！
-
-#### 座談会
-
-* 5/1(月)
-
-疑問や相談にお答えします！部員とおしゃべりしたい方はぜひお越しください！
-
-### 休日午後のイベント
-
-14:00～16:00　現地集合
-
-#### 散策会
-
-* 4/11(火)：筑波大学構内
-* 4/23(日)：つくばセンター周辺
-* 4/29(土)：筑波実験植物園
-
-学内や周辺をカメラを持って散策します。カメラ貸出（[申込はこちら](https://forms.gle/ZTfhPLiWG6naEZGq7)）あり！
-
-### その他のイベント
-
-筑波大学写真部は4月8日（土）に行われる新歓本祭に出展します。1C310教室（第一エリア1C棟3階）にてお待ちしています！
-
-また、平日夕方を中心に暗室（1C104）の開放を実施します。入退室は自由なので、ぜひ部員と話しに来てください。詳しい日程は[公式Twitter](https://twitter.com/tsukuba_photo)などで随時ご案内します。
-
-さらに、新歓と並行して、4月5日（水）から5月31日（水）まで体芸図書館Eureka!で「春の展示会」を開催しています。こちらもぜひご覧ください。
+お待ちしています。
 
 <br />
 <hr />
 <br />
 
-The Tsukuba Photo Club is holding events for prospective members in April and early May as shown above.
+The Tsukuba Photo Club is open to new members throughout the year.
 
-We look forward to seeing you.
+We welcome visitors to our weekly meetings from 18:30 every Friday.
+
+For our activities, please also see [our Twitter feed](https://twitter.com/tsukuba_photo).
+
+If you have any questions, please feel free to contact us at tsukuba.photoclub[at]gmail.com (change "[at]" for "@") or through the [question box](https://peing.net/en/tsukuba_photo).
+
+We look forward to hearing from you!
