@@ -31,12 +31,13 @@ const IndexPage: React.FC = () => (
       >
         <Slideshow
           imageUrls={[
+            "/slideshow-23sohosai.jpg",
             "/slideshow-blackboard.jpg",
             "/slideshow-exhibits.jpg",
             "/slideshow-photobooks.jpg",
             "/slideshow-groupphoto.jpg"
           ]}
-          linkUrl=""
+          linkUrl="/blogs/2023-10-27-2023年度雙峰祭"
         />
 {/*
 imageUrls：スライドショーの写真　アスペクト比3:2限定・レポジトリ直下の/staticに保存
