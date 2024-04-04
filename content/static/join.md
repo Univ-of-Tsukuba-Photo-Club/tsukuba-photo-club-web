@@ -1,26 +1,57 @@
 ---
 title: Join
 ---
-筑波大学写真部では、一年を通じて入部を歓迎します。
+### 新歓イベント
+筑波大学写真部では5月初頭までの間、以下の通り新歓イベントを開催します！
 
-毎週金曜日の18:30から行っているミーティングにて、随時見学を受け付けています。
+最新の情報についてはSNSやホームページをご覧ください。
 
-写真部の活動内容については[公式ツイッター](https://twitter.com/tsukuba_photo)も併せてご覧ください。
+イベントはいずれも予約不要です。ただし、撮影会でのデジタル一眼レフ貸出を希望される方はメールやDMでご連絡ください。
 
-また、わからないことがありましたら、メール（tsukuba.photoclub[at]gmail.com　[at]を@に変えてください）や[質問箱](https://peing.net/ja/tsukuba_photo)にてお気軽にお問い合わせください。
+入部希望者はイベント時にお申し出ください！　新歓期間後も通常ミーティングの見学や入部は可能です。
 
-お待ちしています。
+#### 新歓祭
+4月6日（土）　1C306
+
+写真展示や部の説明などを行います。
+
+#### 撮影会
+
+各日14:00～16:00
+
+写真を撮りながら歩きます。
+
+* 4月11日（木）大学構内　中央図書館前集合
+* 4月14日（日）筑波実験植物園　正門前集合
+* 4月20日（土）大学構内　大学会館集合
+* 4月28日（日）つくば駅周辺　センター広場集合
+
+#### 新歓ミーティング
+各日18:30～20:00　1C棟（予定）
+
+4月12日（金）、4月19日（金）、4月26日（金）
+
+部員による写真紹介などを行います。
+
+#### 暗室開放
+コアタイム18:30～19:30
+
+延長の可能性大（SNSをご確認ください）
+
+入退室自由　1C104暗室
+
+4月16日（火）、4月22日（月）、5月1日（水）
+
+部員と話すことができるほか、部の設備などを自由に見学することができます！
+
+#### 新歓展
+4月5日（金）～5月6日（月）　中央図書館2F
+
 
 <br />
 <hr />
 <br />
 
-The Tsukuba Photo Club is open to new members throughout the year.
+The Tsukuba Photo Club is holding events for prospective members in April and early May as shown above.
 
-We welcome visitors to our weekly meetings from 18:30 every Friday.
-
-For our activities, please also see [our Twitter feed](https://twitter.com/tsukuba_photo).
-
-If you have any questions, please feel free to contact us at tsukuba.photoclub[at]gmail.com (change "[at]" for "@") or through the [question box](https://peing.net/en/tsukuba_photo).
-
-We look forward to hearing from you!
+If you wish to borrow a camera at an event, please contact us via DM on X(Twitter) or Instagram.
