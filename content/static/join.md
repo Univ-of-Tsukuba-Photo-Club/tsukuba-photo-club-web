@@ -16,12 +16,3 @@ For our activities, please also see our Twitter feed.
 If you have any questions, please feel free to contact us at tsukuba.photoclub[at]gmail.com (change "[at]" for "@") or through the question box.
 We look forward to hearing from you!
 
-
-
-<br />
-<hr />
-<br />
-
-The Tsukuba Photo Club is holding events for prospective members in April and early May as shown above.
-
-If you wish to borrow a camera at an event, please contact us via DM on X(Twitter) or Instagram.
