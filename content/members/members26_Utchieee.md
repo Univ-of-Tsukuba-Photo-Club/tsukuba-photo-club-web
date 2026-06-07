@@ -1,7 +1,7 @@
 ---
 name: Utchie
 image: /img/members26_Utchieee.jpeg
-grade: “3”
+grade: "3"
 department: 地球学類
 equipment: Canon EOS R / RICHO GR III
 twitter: folding_29udon
