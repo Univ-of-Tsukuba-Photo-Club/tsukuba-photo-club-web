@@ -1,7 +1,7 @@
 ---
 name: AO
 image: /img/members26_AO.jpg
-grade: “3”
+grade: "3"
 department: 理工学群 社会工学類
 equipment: Nikon Z5II/ Nikon D5300
 twitter: 
