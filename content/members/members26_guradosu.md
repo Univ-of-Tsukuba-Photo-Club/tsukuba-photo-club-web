@@ -1,7 +1,7 @@
 ---
 name: ぐらどす
 image: /img/members26_guradosu.jpeg
-grade: “2”
+grade: "2"
 department: 情報学群 情報科学類
 equipment: カメラ18台、レンズ94本、5フォーマット
 twitter: DrMSGLaDOS6
